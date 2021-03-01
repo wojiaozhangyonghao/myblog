@@ -1,8 +1,8 @@
 const slidebar = require('./config.sidebar')
 const update = require('./config.update')
 module.exports = {
-    title: '程序员成长指北',
-    base: '/',
+    title: '前端进阶',
+    base: '/myblog/',
     dest: './web',
     description: '一个用心帮助你成长的公众号',
 
@@ -19,7 +19,7 @@ module.exports = {
             'meta',
             {
                 name: 'keywords',
-                content: '程序员成长指北 前端 公众号 koala 前端文章',
+                content: '前端进阶 前端文章',
             },
         ],
     ],
@@ -33,38 +33,38 @@ module.exports = {
     // serviceWorker: true, // 是否开启 PWA
     themeConfig: {
         logo: '',
-        repo: 'https://github.com/koala-coding/goodBlog',
+        repo: 'https://github.com/wojiaozhangyonghao/myblog',
         sidebarDepth: 1,
-        update: update,
+        update: null,
         nav: [
             {
                 text: '主页',
                 link: '/',
             },
             {
-                text: 'node',
-                link: '/node/',
-            },
-            {
                 text: '前端',
                 link: '/webframe/',
             },
-            {
-                text: '数据库',
-                link: '/database/',
-            },
+            // {
+            //     text: '数据库',
+            //     link: '/database/',
+            // },
             {
                 text: '面试问题',
                 link: '/interview/',
             },
             {
-                text: '招聘●内推',
-                link: 'https://github.com/koala-coding/FE-Infer',
+                text: 'koala-node',
+                link: '/node/',
             },
-            {
-                text: '关于我',
-                link: '/about/2019_year_end.md',
-            },
+            // {
+            //     text: '招聘●内推',
+            //     link: 'https://github.com/koala-coding/FE-Infer',
+            // },
+            // {
+            //     text: '关于我',
+            //     link: '/about/2019_year_end.md',
+            // },
         ],
         sidebar: slidebar,
     },

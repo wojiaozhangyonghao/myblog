@@ -8,7 +8,7 @@
     <div class="group_code">
       <h4>加入技术交流群</h4>
        <p>扫描二维码 备注<span> 加群</span></p>
-       <img src="/wechat.jpg" alt="">
+       <img src="/wechat.png" alt="">
     </div>
   </div>
 </template>

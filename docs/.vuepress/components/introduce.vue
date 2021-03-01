@@ -1,6 +1,6 @@
 <template>
   <div class="introduce_component">
-    <img src="/small.png" alt="">
+    <img src="/home.png" alt="">
     <div class="intro_content">
       <h3>公众号:程序员成长指北</h3>
       <p>koala 学习成长之路</p>

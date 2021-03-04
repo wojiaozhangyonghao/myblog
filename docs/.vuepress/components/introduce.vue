@@ -2,8 +2,8 @@
   <div class="introduce_component">
     <img src="/home.png" alt="">
     <div class="intro_content">
-      <h3>公众号:程序员成长指北</h3>
-      <p>koala 学习成长之路</p>
+       <h3>公众号:前端进阶</h3>
+      <p>前端进阶 学习成长之路</p>
     </div>
   </div>
 </template>

@@ -27,7 +27,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      {{ repoLabel }}
+      {{ repoLabel }}<span style="color:red;">欢迎star</span>
       <OutboundLink/>
     </a>
   </nav>

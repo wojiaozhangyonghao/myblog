@@ -1,8 +1,8 @@
 <template>
   <div class="qrcode_container">
     <div class="tencent_code">
-      <h4>关注作者公众</h4>
-      <p>和万千小伙伴一起学习</p>
+      <h4>赏</h4>
+      <p></p>
       <img src="/ggh.jpg" alt="">
     </div>
     <div class="group_code">

@@ -53,10 +53,14 @@ module.exports = {
                 text: '面试问题',
                 link: '/interview/',
             },
-            {
-                text: 'koala-node',
-                link: '/node/',
-            },
+            //  {
+            //     text: '工作总结',
+            //     link: '/node/',
+            // },
+            // {
+            //     text: 'koala-node',
+            //     link: '/node/',
+            // },
             // {
             //     text: '招聘●内推',
             //     link: 'https://github.com/koala-coding/FE-Infer',

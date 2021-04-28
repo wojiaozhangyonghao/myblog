@@ -63,21 +63,34 @@ module.exports = {
             name: 'vue',
             collabsable: false,
             sidebarDepth: 0,
-            children: [['vue/messageWays', 'vue中使用的8种通信方式']],
+            children: [
+            ['vue/messageWays', 'vue中使用的8种通信方式'],
+            ['vue/storeEncapsulation', 'vue中store模块化封装']
+        ],
         },
-        // {
-        //     title: '工具',
-        //     name: 'tool',
-        //     collabsable: false,
-        //     sidebarDepth: 0,
-        //     children: [
-        //         ['tool/git', 'Git 常见问题汇总'],
-        //         ['tool/', '软件资源'],
-        //         ['tool/vuepressBlog', 'vuepress搭建个人博客'],
-        //         ['tool/chrome', 'chrome常用插件及日常问题'],
-        //         ['tool/node-versions', 'node以前版本'],
-        //     ],
-        // },
+        {
+            title: '工具',
+            name: 'tool',
+            collabsable: false,
+            sidebarDepth: 0,
+            children: [
+                ['tool/picGo', 'github 图床'],
+                // ['tool/', '软件资源'],
+                // ['tool/vuepressBlog', 'vuepress搭建个人博客'],
+                // ['tool/chrome', 'chrome常用插件及日常问题'],
+                // ['tool/node-versions', 'node以前版本'],
+            ],
+        },
+        {
+            title: 'ui插件',
+            name: 'tool',
+            collabsable: false,
+            sidebarDepth: 0,
+            children: [
+                ['tool/web-ui', 'web-ant-ui封装'],
+                // ['tool/git', 'Git 常见问题汇总'],
+            ],
+        },
     ],
     '/interview/': [
         ['css', '面试题-CSS篇'],

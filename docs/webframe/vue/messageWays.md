@@ -641,10 +641,3 @@ export default {
 - 跨级通信:  `eventBus`；Vuex；`provide` / `inject` 、`$attrs` / `$listeners`
 
 
-今天就分享这么多，如果对分享的内容感兴趣，可以关注公众号「程序员成长指北」，或者加入技术交流群，大家一起讨论。
-
-![](http://img.xiaogangzai.cn/way.jpg)
-加入我们一起学习吧！
-![](http://img.xiaogangzai.cn/code.jpg)
-
-

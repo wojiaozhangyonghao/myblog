@@ -1,6 +1,6 @@
 <template>
   <div class="introduce_component">
-    <img src="/home.png" alt="">
+    <img src="/myblog/home.png" alt="">
     <div class="intro_content">
        <h3>公众号:前端进阶</h3>
       <p>前端进阶 学习成长之路</p>

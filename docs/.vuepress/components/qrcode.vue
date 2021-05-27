@@ -1,14 +1,21 @@
+<!--
+ * @Author: zyh
+ * @Date: 2021-02-26 17:26:23
+ * @LastEditors: zyh
+ * @LastEditTime: 2021-05-27 16:27:30
+ * @Description: file content
+-->
 <template>
   <div class="qrcode_container">
     <div class="tencent_code">
       <h4>赏</h4>
       <p></p>
-      <img src="/ggh.jpg" alt="">
+      <img src="/myblog/ggh.jpg" alt="">
     </div>
     <div class="group_code">
       <h4>加入技术交流群</h4>
        <p>扫描二维码 备注<span> 加群</span></p>
-       <img src="/wechat.png" alt="">
+       <img src="/myblog/wechat.png" alt="">
     </div>
   </div>
 </template>

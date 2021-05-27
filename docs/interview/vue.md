@@ -397,17 +397,6 @@ vuex 的 State 在单页应用的开发中本身具有一个“数据库”的�
 3. 如何在 vue 项目里正确地引用 jquery 和 jquery-ui的插件
 
 
-### 公众号技术栈路线
-
-大家好，我是koala，公众号「程序员成长指北」作者，这篇文章是【JS必知必会系列】的高阶函数讲解。目前在做一个node后端工程师进阶路线，加入我们一起学习吧！
-
-![](http://img.xiaogangzai.cn/way.jpg)
-
-
-### 加入我们
-
-![](http://img.xiaogangzai.cn/code.jpg)
-
 
 
 

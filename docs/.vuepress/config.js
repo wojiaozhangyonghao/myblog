@@ -31,9 +31,11 @@ module.exports = {
     },
 
     // serviceWorker: true, // 是否开启 PWA
+    // repo: 'https://github.com/wojiaozhangyonghao/myblog',
     themeConfig: {
         logo: '',
-        repo: 'https://github.com/wojiaozhangyonghao/myblog',
+        repoLabel:'gitHub',
+        repo: 'https://www.baidu.com/',
         sidebarDepth: 1,
         update: null,
         nav: [

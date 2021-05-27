@@ -5,7 +5,6 @@
 3. 实际开发中我们应该选择哪种方式数组去重，本文告诉你。
 4. 你以为的不一定你以为，面试官不只是让你去重一个数组，他想知道的有点多，包括你的思想。
 
-> 作者简介：koala，专注完整的 Node.js 技术栈分享，从 JavaScript 到 Node.js,再到后端数据库，祝您成为优秀的高级 Node.js 工程师。【程序员成长指北】作者，Github 博客开源项目 https://github.com/koala-coding/goodBlog
 
 ## 当面试官问到时怎么回答？
 ### 首先:我知道多少种去重方式
@@ -215,12 +214,6 @@ String.prototype.indexOf = function(s) {
 
 当数组长度大于等于 `200` 时，会创建 `Set `并将 `Set` 转换为数组来进行去重（Set 不存在情况的实现不做分析）。当数组长度小于 `200` 时，会使用类似前面提到的 双重循环 的去重方案，**另外还会做 NaN 的去重**。
 
-## 总结
-面试时回答面试官的问题，除了你能把代码编出来运行出正确的结果，正确还包含对问题的独到见解,还需要考虑下面的问题：
-- **优化**
-- **代码规范**
-- **容错性**
-其实如果是非常难的问题，对你的竞争对手来说，也是难的，关键在于你所表达出的解决问题的思路，甚至通过表达解题思路的方向，以及你考虑问题的全面性，其实不仅仅这一道简单面试题，算法题是如此。我是**koala**，今天这篇先写这么多，一起加油。
 
 ## 参考文章
 [MDN中一些函数讲解](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/)
@@ -230,27 +223,3 @@ String.prototype.indexOf = function(s) {
 [JavaScript专题之数组去重](https://juejin.im/post/5949d85f61ff4b006c0de98b#heading-7)
 
 [排序算法学习总结](http://wiki.jikexueyuan.com/project/easy-learn-algorithm/fast-sort.html)
-
-
-
-### 关注我
-- 欢迎加我微信【coder_qi】，拉你进技术群，长期交流学习...
-- 欢迎关注「程序员成长指北」,一个用心帮助你成长的公众号...
-
-![](http://img.xiaogangzai.cn/leading.png)
-
-### Node系列原创文章
-
-[深入理解Node.js 中的进程与线程
-](https://juejin.im/post/5d43017be51d4561f40adcf9)
-
-[想学Node.js，stream先有必要搞清楚
-](https://juejin.im/post/5d25ce36f265da1ba84ab97a)
-
-[require时，exports和module.exports的区别你真的懂吗](https://juejin.im/post/5d5639c7e51d453b5c1218b4)
-
-[源码解读一文彻底搞懂Events模块
-](https://juejin.im/post/5d69eef7f265da03f12e70a5)
-
-[Node.js 高级进阶之 fs 文件模块学习
-](https://juejin.im/post/5d3f1664e51d4561a34618c1)

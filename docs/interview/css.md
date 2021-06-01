@@ -98,13 +98,14 @@ BFC(Block Formatting Context)，**块级格式化上下文**，是一个独立�
 - 水平垂直居中 
 
 ![水平垂直居中](http://img.xiaogangzai.cn/interview_01.png)
-    1.  已知元素宽高:绝对定位+margin:auto: 
+
+    1.  已知元素宽高:绝对定位+margin:auto
+
 		 ```css 
 		   div{
 	        width: 200px;
 	        height: 200px;
 	        background: green;
-	        
 	        position:absolute;
 	        left:0;
 	        top: 0;
@@ -113,14 +114,14 @@ BFC(Block Formatting Context)，**块级格式化上下文**，是一个独立�
 	        margin: auto;
 	    }
 		 ```
-	 
+<!-- 	 
     2. 已知元素宽高:  绝对定位+负margin
+
    		 ```css 
 		   div{
 	        width: 200px;
 	        height: 200px;
 	        background: green;
-	        
 	        position:absolute;
 	        left:0;
 	        top: 0;
@@ -128,18 +129,20 @@ BFC(Block Formatting Context)，**块级格式化上下文**，是一个独立�
 	        right: 0;
 	        margin: auto;
 	    }
-		 ```
+		 ``` -->
+
     3. `absolute+transform`
+
    ```css 
-	div{
-		width: 200px;
-		height: 200px;
-		background: green;		        
-		position:absolute;
-		left:50%;    /* 定位父级的50% */
-		top:50%;
-		transform: translate(-50%,-50%); /*自己的50% */
-	}
+    div{
+      width: 200px;
+      height: 200px;
+      background: green;		        
+      position:absolute;
+      left:50%;    /* 定位父级的50% */
+      top:50%;
+      transform: translate(-50%,-50%); /*自己的50% */
+    }
    ```
 
     4.  `flex + justify-content + align-items` 
@@ -161,6 +164,20 @@ BFC(Block Formatting Context)，**块级格式化上下文**，是一个独立�
 
 
 ## 4. 清除浮动有哪些方法, 各有什么优缺点
+ 为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？
+
+浮动元素碰到包含它的边框或者浮动元素的边框停留。由于浮动元素不在文档流中，所以文档流的块框表现得就像浮动框不存在一样。浮动元素会漂浮在文档流的块框上。
+浮动带来的问题：
+
+父元素的高度无法被撑开，影响与父元素同级的元素
+与浮动元素同级的非浮动元素（内联元素）会跟随其后
+若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构。
+清除浮动的方式：
+
+<!-- 父级div定义height
+最后一个浮动元素后加空div标签 并添加样式clear:both。
+包含浮动元素的父标签添加样式overflow为hidden或auto。
+父级div定义zoom -->
 
 - 使用clear属性的空元素
 在浮动元素后使用一个空元素如`<div class="clear"></div>`，并在CSS中赋予`.clear{clear:both;}`属性即可清理浮动。亦可使用`<br class="clear" />`或`<hr class="clear" />`来进行清理。
@@ -454,14 +471,50 @@ BFC(Block Formatting Context)，**块级格式化上下文**，是一个独立�
 4. DOM可控性区别
 >可以通过 JS 操作 DOM ，插入link标签来改变样式；由于DOM方法是基于文档的，无法使用@import的方式插入样式。
 
+## 9 position跟display、overflow、float这些特性相互叠加后会怎么样？
 
-css部分就整理到这里, 小伙伴们面试还有什么经常遇到的,可以在评论区给我留言, 我有时间就整理出来, IT(挨踢)都是一大家, 方便你我他
+display属性规定元素应该生成的框的类型；position属性规定元素的定位类型；float属性是一种布局方式，定义元素在哪个方向浮动。
+类似于优先级机制：position：absolute/fixed优先级最高，有他们在时，float不起作用，display值需要调整。float 或者absolute定位的元素，只能是块元素或表格。
+## 10 上下margin重合的问题
 
-## 9. 开发中为什么要初始化css样式
+在重合元素外包裹一层容器，并触发该容器生成一个BFC。
+例子：
+
+```html
+<div class="aside"></div>
+<div class="text">
+    <div class="main"></div>
+</div>
+<!--下面是css代码-->
+ .aside {
+            margin-bottom: 100px;  
+            width: 100px;
+            height: 150px;
+            background: #f66;
+        }
+        .main {
+            margin-top: 100px;
+            height: 200px;
+            background: #fcc;
+        }
+         .text{
+            /*盒子main的外面包一个div，通过改变此div的属性使两个盒子分属于两个不同的BFC，以此来阻止margin重叠*/
+            overflow: hidden;  //此时已经触发了BFC属性。
+        }
+
+```
+## 11 满足下列条件之一就可触发BFC
+
+根元素，即html
+float的值不为none（默认）
+overflow的值不为visible（默认）
+display的值为inline-block、table-cell、table-caption
+position的值为absolute或fixed
+## 12. 开发中为什么要初始化css样式
 
 因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。
 
-## 10. CSS优化、提高性能的方法有哪些
+## 13. CSS优化、提高性能的方法有哪些
 - 尽量将样式写在单独的css文件里面，在head元素中引用
  将代码写成单独的css文件有几点好处：
      1. 内容和样式分离，易于管理和维护

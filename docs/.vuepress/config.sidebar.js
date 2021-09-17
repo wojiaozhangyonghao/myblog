@@ -88,7 +88,7 @@ module.exports = {
             sidebarDepth: 0,
             children: [
                 ['tool/web-ui', 'web-ant-ui封装'],
-                // ['tool/git', 'Git 常见问题汇总'],
+                ['tool/web-ui-demo', 'demo代码'],
             ],
         },
     ],

@@ -9,7 +9,8 @@
   支持所有符合ES5标准的浏览器(不支持IE8及以下版本）.
 ### 分辨率
   建议在1920*1080分辨率使用
-
+### Demo预览
+[Demo链接](https://wojiaozhangyonghao.github.io/wen-ui/)
 # 文件
 
 | 文件名 | 用途 |

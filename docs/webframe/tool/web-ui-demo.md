@@ -2,7 +2,7 @@
  * @Author: zyh
  * @Date: 2021-09-17 14:10:03
  * @LastEditors: zyh
- * @LastEditTime: 2021-09-17 14:17:58
+ * @LastEditTime: 2021-09-20 16:35:42
  * @Description: file content
 -->
 
@@ -24,45 +24,53 @@
       @search-change="handleSearchChange"
       @size-change="sizeChange"
       @sort-change="sortChange">
-    <!--代码可以修改 start-->
-      <template slot="menuLeft">
-        <!--根据权限确定是否显示table左上侧的按钮-->
-        <el-button id="demo_add" type="primary" @click="rowAdd" icon="el-icon-plus" >新 增</el-button>
-        <!--根据权限确定是否显示table左上侧的组按钮-->
-        <el-button-group style="margin-left: 20px">
-          <el-button id="demo_delAll" type="danger" icon="el-icon-delete" @click="handleDelAll">删除</el-button>
-        </el-button-group>
-        <button-group></button-group>
-      </template>
-      <template slot-scope="scope" slot="menu">
-        <el-tooltip class="item" effect="dark" content="删除该条信息">
-          <i id="demo_del" @click="handleDel(scope.row)" class="el-icon-delete"></i>
-        </el-tooltip>
-        <el-tooltip class="item" effect="dark" content="编辑该条信息">
-          <i id="demo_edit" @click="rowEdit(scope.row)" class="el-icon-edit-outline"></i>
-        </el-tooltip>
-        <el-tooltip class="item" effect="dark" content="查看该条信息">
-          <i id="demo_view" @click="rowView(scope.row)" class="el-icon-document"></i>
-        </el-tooltip>
-        <col-button :row="scope.row"></col-button>
-      </template>
-      <template slot-scope="props" v-for="slot in slots" :slot="slot.name">
-        <component :is="slot.name" :data="scope.row" :ref="slot.name" ></component>
-      </template>
-    <!--代码可以修改 end-->
+
+     <template slot="search">
+			<el-col :md="6" :xs="24">
+				<el-form-item label="自定义">
+					<el-input placeholder="自定义搜索" size="small" v-model="searchForm.slot" />
+				</el-form-item>
+			</el-col>
+		</template>
+		<template slot="searchMenu">
+			<el-button size="small" >查询自定义按钮</el-button>
+		</template>
+		<template slot-scope="scope" slot="nameForm">
+			<el-tag :size="scope.size">{{ scope.label }}</el-tag>
+		</template>
+		<template slot-scope="scope" slot="name">
+			<el-tag :size="scope.size">{{ scope.label }}</el-tag>
+		</template>
+		<template slot="tip">
+			<el-button type="text" size="small">
+				tip自定义按钮
+			</el-button>
+			<span>tip自定义内容</span>
+		</template>
+		<template slot-scope="props" slot="menuLeft">
+			<el-button type="warning" size="small" icon="el-icon-message" > 发送邮件</el-button>
+		</template>
+		<template slot-scope="props" slot="expand">
+			<el-tag>备注：</el-tag>  {{ props.row.projectComment }}
+		</template>
+		<template slot-scope="scope" slot="menu">
+			<el-button :size="scope.size" :disabled="scope.disabled" :type="scope.type" icon="el-icon-share"></el-button>
+		</template>
+		<template slot-scope="scope" slot="menuForm">
+			<el-button :size="scope.size">自定义按钮</el-button>
+		</template>
     </page-table>
   </div>
 </template>
 <script>
   import { fetchList, delObj, tableOption, getSlots, testMockServer} from "./demo";
   import routerParams from "@/template/mixins/router-params.js";
-  import pageAction from "@/template/mixins/page-action.js";
   import buttonGroup from "./toolkit/table-button-group"
   import colButton from "./toolkit/table-column-button"
   import { getDic } from '@/api/admin';
   export default {
     name: 'demo-page',
-    mixins: [routerParams(),pageAction()],
+    mixins: [routerParams()],
     components: {
       buttonGroup,
       colButton
@@ -85,14 +93,7 @@
     },
     created() {
       this.tableOption = tableOption
-      getSlots('table',tableOption).forEach(item =>{
-        item['name'] = require(`${item.path}`)
-        this.slots.push(item)
-      })
       this.handleList()
-      testMockServer().then(res=>{
-        console.log(res)
-      })
     },
     methods: {
       handleRowClick(val){
@@ -190,86 +191,190 @@ import request from '@/router/axios'
  * **/
 
 export const tableOption = {
-  //table 左侧的可选框是否显示
-  selection: false,
-  dicUrl: dicUrl,
-  // table 右侧操作按钮列的宽度，默认为120,
-  menuWidth: 150,
-  //必填，标记工作流状态
-  workflow: false,
+  menuBtn:true,//搜索清空按钮
+  searchSlot:false,//搜索条件slot
+  showBar:true,// 引导
+  functionName:'装备查询',//查询标头
+  menu:true,// 操作列是否显示
+  selection: true,//table 左侧的可选框是否显示
+  // dicUrl: dicUrl,//dicUrl : 字典服务器地址
+  menuWidth: 150,// table 右侧操作按钮列的宽度，默认为120,
+  workflow: false,//必填，标记工作流状态
+  width:500, //表格宽度     不写宽度表格底部scroll 消失
+  // height:800, // 表格高度
+  border: true, // 表格是否有边框 
+  searchSize: "default", // 搜索条件框 大小  large default  small
+  searchSizeBtn:"default", // 搜索按钮  大小  large default  small
+  addBtn: true,  // 新增按钮是否显示
+  editBtn: true, // 编辑按钮是否显示
+  viewBtn: true, // 查看按钮是否显示
+  delBtn:true, // 删除按钮 是否显示
+  // exportFileBtn:false,// 导出按钮是否显示
+  labelCol:{ span: 6 }, // 表单label width
+  // searchLabelCol:{ span: 8 }, // 搜索条件label width
+  labelPosition:'left',
+  refreshBtn:true, // 刷新按钮 是否显示
+  showClomnuBtn:true, // 配置表格显示列按钮 是否显示
+  showSearchBtn:true, // 是否 收起搜索条件按钮  是否显示
+  pagination:false, // 是否显示默认的分页
+  pageSizeOptions: ['10', '20', '30', '40', '50'],//指定每页可以显示多少条
+  size:"small",    //表格大小  default | middle | small
+  showHeader:true,  // 是否显示表头
+  align:"left",    //设置列内容的对齐方式  	'left' | 'right' | 'center'
+  formWidth:'70%',//表单弹框宽度
+  selectClearBtn:true,//多选清空按钮是否显示
+  menuAlign:"left",//菜单栏对齐方式
   column: [{
-      label: "系统ID",
-      prop: "systemId",
-      width: "80",
-      search: true
-    },
-    {
-      label: "系统ID1",
-      prop: "systemId1",
-      width: "80",
-      search: true
-
-    },
-    {
-      label: "系统ID2",
-      prop: "systemId2",
-      width: "80",
-      search: true
-
-    },
-    {
-      label: "系统类型",
-      prop: "systemType",
-      width: "250",
-      type: "select",
-      dicData: "SYSTEM_TYPE",
-      sortable: true,
-      multiple: true,
+      title: 'zb类型',
+      dataIndex: 'zbType',
+      key: 'zbType',
+      type:'select',
+      span:12,
       search: true,
-      span: 24
+      dicData:DIC.channels,
+      showSearch:true,//多选框是否开启搜索
+      width: 200,
     },
     {
-      label: "系统ID3",
-      prop: "systemId3",
-      width: "80",
+      title: "zb名称",
+      key: 'company',
+      dataIndex: "company",
+      width: 200,
+      span:12,
+      search: true,
+      ellipsis: true, // 超过宽度将自动省略
     },
     {
-      label: "系统代码",
-      prop: "test-systemCode",
-      width: "250",
+      dataIndex: 'name1',
+      key: 'name1',
+      title: '装备计划价/预算',
+      ellipsis: true,
+      width: 200,
+      span:12,
+      valueDefault:'a',
+      prefix:'¥', //输入框头部内容
+      suffix:'RMB',//输入框尾部内容
+      allowClear:false,//表单清空
+      placeholder:"sssssssssss",
+      scopedSlots: { customRender: 'id' },
     },
     {
-      label: "系统名称",
-      prop: "test-systemName",
-      width: "250",
-      sortable: true,
+      title: '任务类型',
+      dataIndex: 'name3',
+      key: 'name3',
+      span:12,
+      type:'select',
+      multiple:'multiple',
+      dicData:DIC.channels,
+      ellipsis: true,
+      width: 200,
     },
     {
-      label: "示例列表",
-      prop: "tables",
-      formsolt: true
+      title: '采购方式',
+      dataIndex: 'name4',
+      key: 'name4',
+      span:12,
+      type:'select',
+      multiple:'multiple',
+      dicData:DIC.channels,
+      ellipsis: true,
+      width: 200,
     },
     {
-      label: "示例列表1",
-      prop: "table1",
-      formsolt: true
+      title: "数量",
+      dataIndex: "goalPrice",
+      key: 'goalPrice',
+      width: 250,
+      type: "number",
+      minRows:1000,
+      maxRows:10000,
+      span: 12,
+      ellipsis: true, // 超过宽度将自动省略
     },
     {
-      label: "系统备注",
-      prop: "dataNote",
+      title: "月份",
+      key: 'offerPriceTime',
+      type:'month',
+      dataIndex: "offerPriceTime",
+      valueFormat: "YYYY-MM",
+      format: "YYYY-MM",
+      width: 200,
+      span:12,
+      ellipsis: true, // 超过宽度将自动省略
+    },
+    {
+      title: "批价年度",
+      key: 'examinePriceTime',
+      type:'date',
+      span:12,
+      dataIndex: "examinePriceTime",
+      valueFormat: "YYYY-MM-DD",
+      format: "YYYY-MM-DD",
+      valueDefault:'2020-02-02 12:12:12',
+      searchDefault:'2020-02-02 12:12:12',
+      width: 200,
+      ellipsis: true, // 超过宽度将自动省略
+    },
+    {
+      title: "审价年度",
+      key: 'planYear',
+      type:'year',
+      span:12,
+      dataIndex: "planYear",
+      valueFormat: "YYYY",
+      format: "YYYY",
+      width: 200,
+      ellipsis: true, // 超过宽度将自动省略
+    },
+    {
+      title: "年限",
+      key: 'reportPriceTime',
+      type:'dateRange',
+      hide:true,
+      span:12,
+      dataIndex: "reportPriceTime",
+      addVisdiplay:false,
+      width: 200,
+      ellipsis: true, // 超过宽度将自动省略
+    },
+    {
+      title: "批价文号",
+      key: 'name8',
+      dataIndex: "name8",
+      editDisabled:true,
+      width: 200,
+      span:12,
+      ellipsis: true, // 超过宽度将自动省略
+    },
+    {
+      title: "承制单位",
+      key: 'name9',
+      dataIndex: "name9",
+      width: 200,
+      span:12,
+      formsolt:true,
+      ellipsis: true, // 超过宽度将自动省略
+    },
+    {
+      title: "备注",
+      key: 'bz',
+      dataIndex: "bz",
+      minRows: 2,
+      maxRows: 6,
+      span:12,
       type: "textarea",
-      sortable: false,
-      search: false,
-      overHidden: true,
+      width: 250,//列宽
+      align:"right", // 设置列内容的对齐方式
+      ellipsis: true, // 超过宽度将自动省略
       rules: [ //{ required: true, message: "请输入系统备注", trigger: "blur"},
         {
-          required: false,
+          required: true,
           message: "系统备注的最大长度为660个字符",
           trigger: "blur",
           pattern: '^.{0,660}$'
         }
       ]
-    }
+    },
   ]
 };
 
@@ -320,84 +425,87 @@ export function delObj(id, audit) {
 ```
 # page-form
 ```html
+/**
+* Created by qinzitong on 2019/10/16
+*/
 <template>
-  <div id="demoItem">
-    <!--componentId 的值需要修改-->
-    <page-form
-      :option="tableOption"
-      :rowModel="formOption"
-      componentId="demoItem"
-      ref="pageForm"
-      :formTitle="title"
-      :boxType="boxType"
-      @row-save="handleSave"
-      @row-update="handleUpdate">
-      <template slot-scope="props" v-for="slot in slots" :slot="slot.slotName">
-        <component :is="slot.name" :data="row" :ref="slot.name" ></component>
-      </template>
-      <el-button-group slot="buttons">
-        <button-group></button-group>
-      </el-button-group>
-    </page-form>
-  </div>
+	<page-form ref="crud"
+	                 :option="option"
+	                 :upload-before="uploadBefore"
+	                 :upload-after="uploadAfter"
+	                 :before-open="handleBeforeOpen"
+	                 :before-close="handleBeforeClose"
+	                 @row-save="rowSave"
+	                 @row-update="rowUpdate">
+		<template slot-scope="scope" slot="menuForm">
+			<el-button :size="scope.size">自定义按钮</el-button>
+		</template>
+	</page-form>
 </template>
+
 <script>
-  import { tableOption, addObj, putObj, getSlots } from "./demo";
-  import routerParams from "@/template/mixins/router-params.js";
-  import formAction from "@/template/mixins/form-action.js";
-  import buttonGroup from "./toolkit/form-button-group"
-  import { getDic } from '@/api/admin';
+  import { tableOption, addObj, putObj } from './jx-ui-demo.js'
+	import { auditDataMaker } from '@/template/util/audit.js'
   export default {
-    name: 'demo-form',
-    mixins: [routerParams(),formAction()],
-    components: {
-      buttonGroup
-    },
+    name: 'jx-ui-demo-form',
     data() {
       return {
-        tableOption: {}, //表格设置属性
-        dataTable:[],
-      };
-    },
-    created() {
-      this.tableOption = tableOption
-      getSlots('form',tableOption).forEach(item =>{
-        item['name'] = require(`${item.path}`)
-	      this.slots.push(item)
-      })
+        loading: true,
+        page: {
+          total: 2000
+        },
+        option: tableOption
+      }
     },
     methods: {
-      handleSave(row,done){
-        addObj(row).then((res) => {
+      rowSave(form, done, loading, auditData) {
+        console.log(auditData)
+        addObj(form).then((res) => {
           this.$message({
             showClose: true,
-            message: "基金信息添加成功",
+            message: "添加成功",
             type: "success"
           });
-          done(true)
+          done()
         }).catch((err) => {
-          done(false)
+          loading()
         });
       },
-      handleUpdate(row, index, done) {
-        putObj(row).then(response => {
+      rowUpdate(form, index, done, loading, auditData) {
+        console.log(auditData)
+        putObj(form).then((res) => {
           this.$message({
             showClose: true,
-            message: "基金信息修改成功",
+            message: "添加成功",
             type: "success"
           });
-          done(true)
+          done()
         }).catch((err) => {
-          done(false)
+          loading()
         });
       },
+
+      uploadBefore(file, done, loading) {
+        console.log(file)
+        done()
+        this.$message.success('上传前的方法')
+      },
+      uploadAfter(res, done, loading) {
+        console.log(res)
+        done()
+        this.$message.success('上传后的方法')
+      },
+			auditDataMaker(form,auditLog,path){
+      	return auditDataMaker(form,auditLog,path)
+			}
     }
-  }
+  };
 </script>
 
 <style lang="scss" scoped>
 
 </style>
+
 
 ```
 

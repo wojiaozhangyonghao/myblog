@@ -1,3 +1,10 @@
+<!--
+ * @Author: zyh
+ * @Date: 2021-05-31 09:15:52
+ * @LastEditors: zyh
+ * @LastEditTime: 2021-09-20 16:42:44
+ * @Description: file content
+-->
 # 手写 Promise
 
 在上一章节中我们了解了 `Promise` 的一些易错点，在这一章节中，我们会通过手写一个符合 Promise/A+ 规范的 `Promise` 来深入理解它，并且手写 `Promise` 也是一道大厂常考题，在进入正题之前，推荐各位阅读一下 [Promise/A+ 规范](http://www.ituring.com.cn/article/66566)，这样才能更好地理解这个章节的代码。
@@ -293,9 +300,3 @@ if (x !== null && (typeof x === 'object' || typeof x === 'function')) {
 *   如果 `x` 是对象或者函数的话，先把 `x.then` 赋值给 `then`，然后判断 `then` 的类型，如果不是函数类型的话，就将 `x` 传入 `resolve` 中
 *   如果 `then` 是函数类型的话，就将 `x` 作为函数的作用域 `this` 调用之，并且传递两个回调函数作为参数，第一个参数叫做 `resolvePromise` ，第二个参数叫做 `rejectPromise`，两个回调函数都需要判断是否已经执行过函数，然后进行相应的逻辑
 *   以上代码在执行的过程中如果抛错了，将错误传入 `reject` 函数中
-
-以上就是符合 Promise/A+ 规范的实现了，如果你对于这部分代码尚有疑问，欢迎在评论中与我互动。
-
-## 小结
-
-这一章节我们分别实现了简单版和符合 Promise/A+ 规范的 `Promise`，前者已经足够应付大部分面试的手写题目，毕竟写出一个符合规范的 `Promise` 在面试中不大现实。后者能让你更加深入地理解 `Promise` 的运行原理，做技术的深挖者。

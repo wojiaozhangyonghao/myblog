@@ -4,12 +4,12 @@ heroImage: /home.png
 actionText: 开始阅读 →
 actionLink: /webframe/
 features:
-- title: day day up
-  details: 记录每一天的进步.
+- title: 
+  details: 
 - title: 前端进阶
-  details: node vue 
-- title: 前端进阶
-  details: 乐于分项 座右铭：今天未完成的，明天更不会完成。
+  details:  vue js html 
+- title: 
+  details: 
 ---
 <!-- 
 [<img src="https://img.shields.io/badge/%E6%8E%98%E9%87%91-10k-42b983.svg">](https://juejin.im/user/5cf288385188254abb110e3b)

@@ -20,7 +20,7 @@
 * [`ES7系列`async和await讲解](/webframe/es6/async-await.md) -->
 
 #### vue
-* [`vue组件通信`vue中组件之间8中通信方式](/webframe/vue/messageWays.md)
+* [web-ant-ui](/webframe/tool/web-ui.md)
 
 <!-- #### 常用软件下载
 - teamviewer破解版 远程控制软件(附带破解视频教学) 提取码：7aud[下载](https://pan.baidu.com/s/1O_9hBfqq1vBLkx9E51RrWA) 

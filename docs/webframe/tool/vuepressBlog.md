@@ -1,15 +1,5 @@
 ## 为什么选择vuepress
-之前使用docsify部署过个人博客, 在此之前也使用过gitbook, 这次使用vuepress来改版, 根据自己的体验, 将这三者做一个对比
-
-- 从阅读体验来说(个人感觉): gitbook > docsify =vuepress
-
-- 从配置上来说, docsify相比于vuepress和gitbook都要简单一些.
-
-- 从性能上来说: vuepress > docsify 
-
-  虽然docsify也是基于vue的, docsify是运行时解析, vuepress是预先渲染HTML
-
-- 灵活性上, vuepress也是相当占优势的, 对vue熟悉的朋友可以编写vue组件实现你想要的功能样式
+容易上手，跟随尤大大
   
 
 ### vuepress特性
@@ -23,8 +13,6 @@
 - 响应式布局
 - 支持PWA模式
 
-
-总的来说, 使用vuepress优势有挺多的, 特别是我之前使用docsify搭建的网站, 是一点也没有被浏览器收录啊, 怎么都搜不到,受到一万点打击,所以决心改一改
 
 其实[vuepress的官网](https://v1.vuepress.vuejs.org/zh/guide/)已经写的挺好的了, 但是我这篇文章也有优势啊,是一步步的教你搭建, 这样就不用来回在文档中去找什么配置.(当然如果你想直接通过官网来学习, 可以直接看官网,点击链接就可以喔)
 
@@ -104,8 +92,8 @@ touch config.js
 
 ```javascript
 module.exports = {
-    title: 'koala的博客',
-    description: '专注 Node.js 技术栈分享，从前端到Node.js再到数据库',
+    title: '别闹的博客',
+    description: '前端分享',
 }
 ```
  如果这时运行`npm run docs:dev`或者`yarn docs:dev`, 会出现页面404页面,vuepress默认打开的是docs下的`readme.md`文件, 由于你没有创建,所以找到的是vuepress默认提供的404页面, 关于这有点,我们借助[vue-devtools](https://github.com/vuejs/vue-devtools)工具来查看一下vue的结构
@@ -125,20 +113,20 @@ heroImage: /home.png
 actionText: Get Started →
 actionLink: /node/
 features:
-- title: day day up
-  details: 记录每一天的进步, 一分耕耘，一分收获.
-- title: 程序员成长指北
-  details: 专注 Node.js 技术栈分享，从 前端 到 Node.js 再到 后端数据库，祝您成为优秀的高级 Node.js 全栈工程师
-- title: koala
-  details: 一个有趣的且乐于分享的人。座右铭：今天未完成的，明天更不会完成。
+- title: 别闹
+  details: 记录每一天的进步.
+- title: 前端进阶
+  details: 前端分享
+- title: 别闹
+  details: 每天成长一点点。
 footer: MIT Licensed | Copyright © 2018-present Evan You
 
 ---
 ```
 
-效果图如下:
+<!-- 效果图如下:
 
-![](https://user-gold-cdn.xitu.io/2019/12/31/16f59cc52c658352?w=1101&h=952&f=png&s=65498)
+![](https://user-gold-cdn.xitu.io/2019/12/31/16f59cc52c658352?w=1101&h=952&f=png&s=65498) -->
 
 
 ### 配置导航栏nav
@@ -146,10 +134,7 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 ```javascript
 themeConfig:{
   nav: [{text: "主页", link: "/"      },
-      { text: "node", link: "/node/" },
       { text: "前端", link: "/webframe/"},
-      { text: "数据库", link: "/database/"   },
-      { text: "android", link: "/android/"   },
       { text: "面试问题", link: "/interview/" }
     ],
 }
@@ -170,8 +155,6 @@ themeConfig:{
           { text: "css", link:"/web/css/"},
           ]
       },
-      { text: "数据库", link: "/database/"   },
-      { text: "android", link: "/android/"   },
       { text: "面试问题", link: "/interview/" }
     ],
 }

@@ -206,9 +206,3 @@ class Child extends React.Component {
 ### 任意组件
 
 这种方式可以通过 Redux 或者 Event Bus 解决，另外如果你不怕麻烦的话，可以使用这种方式解决上述所有的通信情况
-
-## 小结
-
-总的来说这一章节的内容更多的偏向于 React 的基础，另外 React 的面试题还会经常考到 Virtual DOM 中的内容，所以这块内容大家也需要好好准备。
-
-下一章节我们将来了解一些 React 的进阶知识内容。

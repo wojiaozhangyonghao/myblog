@@ -310,9 +310,3 @@ if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
 }
 
 ```
-
-以上代码很简单，就是判断能不能使用相应的 API。
-
-## 小结
-
-以上就是 Vue 的几个高频核心问题了，如果你还想了解更多的源码相关的细节，强烈推荐黄老师的 [Vue 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)。

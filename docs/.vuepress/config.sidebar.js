@@ -58,36 +58,36 @@ module.exports = {
         //         ['es6/async-await', 'async和await讲解'],
         //     ],
         // },
+        // {
+        //     title: 'vue',
+        //     name: 'vue',
+        //     collabsable: false,
+        //     sidebarDepth: 0,
+        //     children: [
+        //     ['vue/messageWays', 'vue中使用的8种通信方式'],
+        //     // ['vue/storeEncapsulation', 'vue中store模块化封装']
+        // ],
+        // },
+        // {
+        //     title: '工具',
+        //     name: 'tool',
+        //     collabsable: false,
+        //     sidebarDepth: 0,
+        //     children: [
+        //         // ['tool/picGo', 'github 图床'],
+        //         // ['tool/', '软件资源'],
+        //         // ['tool/vuepressBlog', 'vuepress搭建个人博客'],
+        //         // ['tool/chrome', 'chrome常用插件及日常问题'],
+        //         // ['tool/node-versions', 'node以前版本'],
+        //     ],
+        // },
         {
-            title: 'vue',
-            name: 'vue',
-            collabsable: false,
-            sidebarDepth: 0,
-            children: [
-            ['vue/messageWays', 'vue中使用的8种通信方式'],
-            ['vue/storeEncapsulation', 'vue中store模块化封装']
-        ],
-        },
-        {
-            title: '工具',
+            title: 'web-ant-ui',
             name: 'tool',
             collabsable: false,
             sidebarDepth: 0,
             children: [
-                ['tool/picGo', 'github 图床'],
-                // ['tool/', '软件资源'],
-                // ['tool/vuepressBlog', 'vuepress搭建个人博客'],
-                // ['tool/chrome', 'chrome常用插件及日常问题'],
-                // ['tool/node-versions', 'node以前版本'],
-            ],
-        },
-        {
-            title: 'ui插件',
-            name: 'tool',
-            collabsable: false,
-            sidebarDepth: 0,
-            children: [
-                ['tool/web-ui', 'web-ant-ui封装'],
+                ['tool/web-ui', '文档'],
                 ['tool/web-ui-demo', 'demo代码'],
             ],
         },
@@ -118,8 +118,8 @@ module.exports = {
         ['browser', '浏览器缓存机制'],
         ['browser1', '浏览器基础知识点及常考面试题'],
         ['browser2', '浏览器浏览器渲染原理缓存机制'],
-        ['InterviewSkills', '面试常用技巧'],
-        ['performanceOptimization', '性能优化琐碎事'],
+        // ['InterviewSkills', '面试常用技巧'],
+        ['performanceOptimization', '性能优化'],
     ],
     '/node/': [
         ['what', 'node.js究竟是什么'],

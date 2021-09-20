@@ -4,7 +4,7 @@ module.exports = {
     title: '前端进阶',
     base: '/myblog/',
     dest: './web',
-    description: '一个用心帮助你成长的公众号',
+    description: '公众号',
 
     head: [
         [
@@ -35,7 +35,8 @@ module.exports = {
     themeConfig: {
         logo: '',
         repoLabel:'gitHub',
-        repo: 'https://www.baidu.com/',
+        // repo: 'https://www.baidu.com/',
+        repo: 'https://github.com/',
         sidebarDepth: 1,
         update: null,
         nav: [

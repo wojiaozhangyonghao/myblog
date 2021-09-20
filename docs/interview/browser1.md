@@ -359,7 +359,3 @@ self.addEventListener('fetch', e => {
 当我们重新刷新页面可以发现我们缓存的数据是从 Service Worker 中读取的
 
 ![](https://user-gold-cdn.xitu.io/2018/3/28/1626b20e4f8f3257?w=2818&h=298&f=png&s=74833)
-
-## 小结
-
-以上就是浏览器基础知识点的内容了，如果大家对于这个章节的内容存在疑问，欢迎在评论区与我互动。

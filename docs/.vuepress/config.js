@@ -4,7 +4,8 @@ module.exports = {
     title: '前端进阶',
     base: '/myblog/',
     dest: './web',
-    description: '公众号',
+    // description: '公众号',
+    description: '欢迎来到前端进阶博客',
 
     head: [
         [

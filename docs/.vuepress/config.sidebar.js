@@ -76,7 +76,7 @@ module.exports = {
         //     children: [
         //         // ['tool/picGo', 'github 图床'],
         //         // ['tool/', '软件资源'],
-        //         // ['tool/vuepressBlog', 'vuepress搭建个人博客'],
+        //         ['tool/vuepressBlog', 'vuepress搭建个人博客'],
         //         // ['tool/chrome', 'chrome常用插件及日常问题'],
         //         // ['tool/node-versions', 'node以前版本'],
         //     ],

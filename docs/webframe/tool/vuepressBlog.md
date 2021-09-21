@@ -14,7 +14,7 @@
 - 支持PWA模式
 
 
-其实[vuepress的官网](https://v1.vuepress.vuejs.org/zh/guide/)已经写的挺好的了, 但是我这篇文章也有优势啊,是一步步的教你搭建, 这样就不用来回在文档中去找什么配置.(当然如果你想直接通过官网来学习, 可以直接看官网,点击链接就可以喔)
+[vuepress的官网](https://v1.vuepress.vuejs.org/zh/guide/)
 
 
 ## 项目搭建
@@ -196,7 +196,7 @@ module.exports = {
       "/node/":[
         ["", "node目录"],
         ["path", "作为前端也需要知道的路径知识"],
-        ["stream", "node核心模块-stream"]
+        ["tool", "vue核心模块-tool"]
       ],
       "/web/":[
         ["", "前端"],
@@ -215,7 +215,7 @@ module.exports = {
 }
 ```
 设置的效果图如下:
-在`node`导航下:
+在`tool`导航下:
 ![](https://user-gold-cdn.xitu.io/2019/12/31/16f59cd92669ea17?w=957&h=440&f=png&s=35818)
 
 在`前端`导航下的效果:
@@ -231,8 +231,8 @@ module.exports = {
 <template>
   <div class="fixed_container">
     <div class="tencent_code">
-      <h4>关注作者公众</h4>
-      <p>和万千小伙伴一起学习</p>
+      <h4></h4>
+      <p></p>
       <img src="/ggh.jpg" alt="">
     </div>
     <div class="group_code">
@@ -250,7 +250,6 @@ export default {
 }
 </script>
  ....
- // 这里省略了部分样式代码, 想看全部的小伙伴点开github地址就可以了
  
 ```
 
@@ -323,21 +322,19 @@ module.exports = {
 manifest.json 文件
 ```javascript
 {
-  "name": "koala_blog",
+  "name": "wojiaozhangyonghao",
   "short_name": "blog",
   "version": "1.0.0",
-  "description": "程序员成长指北博主, koala的博客",
+  "description": "前端进阶",
   "manifest_version": 2
 }
 ```
 
 
 ### 配置评论
-由于之前有小伙伴说过,『程序员成长指北』公众号上不能评论，所有这次我在博客中增加了评论功能，刚开始本来打算使用gitTalk, 但是我的博客采用的是部署到自己的服务器, 并没有部署成 GitHub Pages, 所有我使用的是`valine `, 它除了评论功能还可以统计阅读量, 请大家看:
 
 ![](https://user-gold-cdn.xitu.io/2019/12/31/16f59d08fa824ffd?w=805&h=635&f=png&s=22318)
 
-但是我后面也会将gitTalk配置方式写出来, 方便使用gitTalk的小伙伴
 
 #### valine 使用
 点击进入 [Valine官网](https://leancloud.cn/dashboard/login.html#/signin) ，需要先注册才能使用.
@@ -516,7 +513,7 @@ git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-# 例如 git push -f git@github.com:koala-coding/blog.git master:gh-pages 
+# 例如 git push -f git@github.com:wojaiozhangyonghao/blog.git master:gh-pages 
 cd -
 ```
 
@@ -526,15 +523,3 @@ cd -
 
 **第六步: setting Github Pages**
 这是最后一步了，在 GitHub 项目点击 Setting 按钮，找到 GitHub Pages - Source，选择 gh-pages 分支，点击 Save 按钮后，静静地等待它部署完成即可。
-
-
-
-## 项目地址
-我的网站 [程序员成长指北](http://www.inode.club) 就是这样搭建出来的!
-
-本文章实现的内容都已经上传到github, 如果不想一步步进行配置的, 可以直接下载下来使用,就不用重复造轮子啦!
-
-
-
-参考文章
-https://juejin.im/post/5c94ddf35188252d65344cfe

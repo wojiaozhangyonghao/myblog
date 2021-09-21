@@ -4,12 +4,12 @@ heroImage: /home.png
 actionText: 开始阅读 →
 actionLink: /webframe/
 features:
-- title: 
-  details: 
+- title: Grow a little every day
+  details: 每天成长一点点
 - title: 前端进阶
-  details:  vue js html 
-- title: 
-  details: 
+  details: vue 
+- title: 别闹
+  details: 乐于分项。
 ---
 <!-- 
 [<img src="https://img.shields.io/badge/%E6%8E%98%E9%87%91-10k-42b983.svg">](https://juejin.im/user/5cf288385188254abb110e3b)

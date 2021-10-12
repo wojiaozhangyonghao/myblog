@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>浏览器基础知识点及常考面试题 | 前端进阶</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="shortcut icon" href="/myblog/favicon.ico" type="iamge/x-icon">
+    <meta name="description" content="欢迎来到前端进阶博客">
+    <meta name="keywords" content="前端进阶 前端文章">
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.1283e053.css" as="style"><link rel="preload" href="/myblog/assets/js/app.73725760.js" as="script"><link rel="preload" href="/myblog/assets/js/2.930e24c3.js" as="script"><link rel="preload" href="/myblog/assets/js/48.2a5e8bc2.js" as="script"><link rel="preload" href="/myblog/assets/js/6.d2a48d28.js" as="script"><link rel="preload" href="/myblog/assets/js/10.bbc026f5.js" as="script"><link rel="preload" href="/myblog/assets/js/5.55ee87d5.js" as="script"><link rel="prefetch" href="/myblog/assets/js/100.129f1307.js"><link rel="prefetch" href="/myblog/assets/js/101.53d810ae.js"><link rel="prefetch" href="/myblog/assets/js/102.c97714f1.js"><link rel="prefetch" href="/myblog/assets/js/103.e1c76fd2.js"><link rel="prefetch" href="/myblog/assets/js/104.bca5d8ed.js"><link rel="prefetch" href="/myblog/assets/js/105.c3781ae3.js"><link rel="prefetch" href="/myblog/assets/js/106.fc31364d.js"><link rel="prefetch" href="/myblog/assets/js/11.993ab3f7.js"><link rel="prefetch" href="/myblog/assets/js/12.d562dcd2.js"><link rel="prefetch" href="/myblog/assets/js/13.63897bd2.js"><link rel="prefetch" href="/myblog/assets/js/14.554bea76.js"><link rel="prefetch" href="/myblog/assets/js/15.903663f7.js"><link rel="prefetch" href="/myblog/assets/js/16.ae62cce8.js"><link rel="prefetch" href="/myblog/assets/js/17.5f8856c1.js"><link rel="prefetch" href="/myblog/assets/js/18.a97e8a3f.js"><link rel="prefetch" href="/myblog/assets/js/19.8dd22ad1.js"><link rel="prefetch" href="/myblog/assets/js/20.37d33db5.js"><link rel="prefetch" href="/myblog/assets/js/21.e35c34ec.js"><link rel="prefetch" href="/myblog/assets/js/22.37bc8223.js"><link rel="prefetch" href="/myblog/assets/js/23.4681e736.js"><link rel="prefetch" href="/myblog/assets/js/24.e6608bea.js"><link rel="prefetch" href="/myblog/assets/js/25.0e42743b.js"><link rel="prefetch" href="/myblog/assets/js/26.24fd48a9.js"><link rel="prefetch" href="/myblog/assets/js/27.8eb97bc8.js"><link rel="prefetch" href="/myblog/assets/js/28.677ea1b2.js"><link rel="prefetch" href="/myblog/assets/js/29.3d459346.js"><link rel="prefetch" href="/myblog/assets/js/3.e704fc44.js"><link rel="prefetch" href="/myblog/assets/js/30.7ec08b74.js"><link rel="prefetch" href="/myblog/assets/js/31.129cbe5c.js"><link rel="prefetch" href="/myblog/assets/js/32.decdd6bc.js"><link rel="prefetch" href="/myblog/assets/js/33.f8e32d1a.js"><link rel="prefetch" href="/myblog/assets/js/34.b1bbc57b.js"><link rel="prefetch" href="/myblog/assets/js/35.e0a3f604.js"><link rel="prefetch" href="/myblog/assets/js/36.1b90abd0.js"><link rel="prefetch" href="/myblog/assets/js/37.e73f4c86.js"><link rel="prefetch" href="/myblog/assets/js/38.5746ba73.js"><link rel="prefetch" href="/myblog/assets/js/39.112b79e0.js"><link rel="prefetch" href="/myblog/assets/js/4.0a553e3f.js"><link rel="prefetch" href="/myblog/assets/js/40.d5fb6bb0.js"><link rel="prefetch" href="/myblog/assets/js/41.3ab64043.js"><link rel="prefetch" href="/myblog/assets/js/42.4a55d177.js"><link rel="prefetch" href="/myblog/assets/js/43.3b40e0f0.js"><link rel="prefetch" href="/myblog/assets/js/44.1f254e95.js"><link rel="prefetch" href="/myblog/assets/js/45.9b2b3797.js"><link rel="prefetch" href="/myblog/assets/js/46.704ac522.js"><link rel="prefetch" href="/myblog/assets/js/47.36da36c4.js"><link rel="prefetch" href="/myblog/assets/js/49.49e81526.js"><link rel="prefetch" href="/myblog/assets/js/50.d21a358d.js"><link rel="prefetch" href="/myblog/assets/js/51.eb3feded.js"><link rel="prefetch" href="/myblog/assets/js/52.a18f23de.js"><link rel="prefetch" href="/myblog/assets/js/53.35bf7d6f.js"><link rel="prefetch" href="/myblog/assets/js/54.0fb6c926.js"><link rel="prefetch" href="/myblog/assets/js/55.dcbcb9be.js"><link rel="prefetch" href="/myblog/assets/js/56.8a057372.js"><link rel="prefetch" href="/myblog/assets/js/57.cfee38c4.js"><link rel="prefetch" href="/myblog/assets/js/58.4314716d.js"><link rel="prefetch" href="/myblog/assets/js/59.94685279.js"><link rel="prefetch" href="/myblog/assets/js/60.bf096a7a.js"><link rel="prefetch" href="/myblog/assets/js/61.7bb11047.js"><link rel="prefetch" href="/myblog/assets/js/62.f91e8eff.js"><link rel="prefetch" href="/myblog/assets/js/63.820b8744.js"><link rel="prefetch" href="/myblog/assets/js/64.53f1a9b0.js"><link rel="prefetch" href="/myblog/assets/js/65.29d31209.js"><link rel="prefetch" href="/myblog/assets/js/66.57b87049.js"><link rel="prefetch" href="/myblog/assets/js/67.2b2e86e4.js"><link rel="prefetch" href="/myblog/assets/js/68.13c61338.js"><link rel="prefetch" href="/myblog/assets/js/69.7f331071.js"><link rel="prefetch" href="/myblog/assets/js/7.9b44bf87.js"><link rel="prefetch" href="/myblog/assets/js/70.d3ec41e0.js"><link rel="prefetch" href="/myblog/assets/js/71.3fd92523.js"><link rel="prefetch" href="/myblog/assets/js/72.62cedd18.js"><link rel="prefetch" href="/myblog/assets/js/73.03e8c043.js"><link rel="prefetch" href="/myblog/assets/js/74.9390a2e8.js"><link rel="prefetch" href="/myblog/assets/js/75.b4e7875f.js"><link rel="prefetch" href="/myblog/assets/js/76.1b28ca40.js"><link rel="prefetch" href="/myblog/assets/js/77.a28386d5.js"><link rel="prefetch" href="/myblog/assets/js/78.1adf0e61.js"><link rel="prefetch" href="/myblog/assets/js/79.5af315a0.js"><link rel="prefetch" href="/myblog/assets/js/8.221d5dbe.js"><link rel="prefetch" href="/myblog/assets/js/80.5571d949.js"><link rel="prefetch" href="/myblog/assets/js/81.fbbb7685.js"><link rel="prefetch" href="/myblog/assets/js/82.586b2504.js"><link rel="prefetch" href="/myblog/assets/js/83.2edd208a.js"><link rel="prefetch" href="/myblog/assets/js/84.62f7a68e.js"><link rel="prefetch" href="/myblog/assets/js/85.7787cba5.js"><link rel="prefetch" href="/myblog/assets/js/86.8c303f94.js"><link rel="prefetch" href="/myblog/assets/js/87.eb0091ee.js"><link rel="prefetch" href="/myblog/assets/js/88.cafbfd00.js"><link rel="prefetch" href="/myblog/assets/js/89.9a8ea80f.js"><link rel="prefetch" href="/myblog/assets/js/9.2b6bd5d7.js"><link rel="prefetch" href="/myblog/assets/js/90.a69b89e2.js"><link rel="prefetch" href="/myblog/assets/js/91.7e12734e.js"><link rel="prefetch" href="/myblog/assets/js/92.94b8cc49.js"><link rel="prefetch" href="/myblog/assets/js/93.96b33ae7.js"><link rel="prefetch" href="/myblog/assets/js/94.b24a698f.js"><link rel="prefetch" href="/myblog/assets/js/95.4e92f6fc.js"><link rel="prefetch" href="/myblog/assets/js/96.3d1ad7fa.js"><link rel="prefetch" href="/myblog/assets/js/97.67b0e4c6.js"><link rel="prefetch" href="/myblog/assets/js/98.f0af5533.js"><link rel="prefetch" href="/myblog/assets/js/99.c8a0f6a9.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.1283e053.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">前端进阶</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/" class="nav-link">主页</a></div><div class="nav-item"><a href="/myblog/webframe/" class="nav-link">前端</a></div> <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    gitHub<span style="color:red;">欢迎star</span> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myblog/" class="nav-link">主页</a></div><div class="nav-item"><a href="/myblog/webframe/" class="nav-link">前端</a></div> <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    gitHub<span style="color:red;">欢迎star</span> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <div class="my_introduce" style="padding-left:1rem;"><div class="introduce_component" data-v-a7d2d778><img src="/myblog/home.png" alt data-v-a7d2d778> <div class="intro_content" data-v-a7d2d778><h3 data-v-a7d2d778>前端进阶</h3> <p data-v-a7d2d778>前端进阶 学习成长之路</p></div></div></div> <ul class="sidebar-links"><li><a href="/myblog/interview/css.html" class="sidebar-link">面试题-CSS篇</a></li><li><a href="/myblog/interview/CSS1.html" class="sidebar-link">CSS 常考面试题资料</a></li><li><a href="/myblog/interview/EventLoop.html" class="sidebar-link">EventLoop篇</a></li><li><a href="/myblog/interview/DevTools.html" class="sidebar-link">DevTools Tips</a></li><li><a href="/myblog/interview/js10.html" class="sidebar-link">面试题-JS篇</a></li><li><a href="/myblog/interview/JS0.html" class="sidebar-link">JS 思考题</a></li><li><a href="/myblog/interview/JS1.html" class="sidebar-link">JS 基础知识点及常考面试题（一）</a></li><li><a href="/myblog/interview/JS2.html" class="sidebar-link">JS 基础知识点及常考面试题（二）</a></li><li><a href="/myblog/interview/JS.html" class="sidebar-link">JS 进阶知识点及常考面试题</a></li><li><a href="/myblog/interview/JS3.html" class="sidebar-link">JS 异步编程及常考面试题</a></li><li><a href="/myblog/interview/algorithm.html" class="sidebar-link">常考算法题解析</a></li><li><a href="/myblog/interview/ES6.html" class="sidebar-link">ES6知识点及常考面试题</a></li><li><a href="/myblog/interview/unique.html" class="sidebar-link">如何答一道惊艳面试官的数组去重问题？</a></li><li><a href="/myblog/interview/rewriteJs.html" class="sidebar-link">手写代码[`编程`]</a></li><li><a href="/myblog/interview/React.html" class="sidebar-link">React 常考基础知识点</a></li><li><a href="/myblog/interview/React1.html" class="sidebar-link">React 常考进阶知识点</a></li><li><a href="/myblog/interview/ReactAndVue.html" class="sidebar-link">React和vue区别</a></li><li><a href="/myblog/interview/vue.html" class="sidebar-link">vue篇</a></li><li><a href="/myblog/interview/Vue1.html" class="sidebar-link">Vue 常考基础知识点</a></li><li><a href="/myblog/interview/Vue2.html" class="sidebar-link">Vue 常考进阶知识点</a></li><li><a href="/myblog/interview/HTTP.html" class="sidebar-link">HTTP 及 TLS</a></li><li><a href="/myblog/interview/HTTP2.html" class="sidebar-link">HTTP 2 及 HTTP 3</a></li><li><a href="/myblog/interview/browser.html" class="sidebar-link">浏览器缓存机制</a></li><li><a href="/myblog/interview/browser1.html" aria-current="page" class="active sidebar-link">浏览器基础知识点及常考面试题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myblog/interview/browser1.html#事件机制" class="sidebar-link">事件机制</a></li><li class="sidebar-sub-header"><a href="/myblog/interview/browser1.html#跨域" class="sidebar-link">跨域</a></li><li class="sidebar-sub-header"><a href="/myblog/interview/browser1.html#存储" class="sidebar-link">存储</a></li></ul></li><li><a href="/myblog/interview/browser2.html" class="sidebar-link">浏览器浏览器渲染原理缓存机制</a></li><li><a href="/myblog/interview/performanceOptimization.html" class="sidebar-link">性能优化</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="浏览器基础知识点及常考面试题"><a href="#浏览器基础知识点及常考面试题" class="header-anchor">#</a> 浏览器基础知识点及常考面试题</h1> <p>这一章节我们将会来学习浏览器的一些基础知识点，包括：事件机制、跨域、存储相关，这几个知识点也是面试经常会考到的内容。</p> <h2 id="事件机制"><a href="#事件机制" class="header-anchor">#</a> 事件机制</h2> <blockquote><p>涉及面试题：事件的触发过程是怎么样的？知道什么是事件代理嘛？</p></blockquote> <h3 id="事件触发三阶段"><a href="#事件触发三阶段" class="header-anchor">#</a> 事件触发三阶段</h3> <p>事件触发有三个阶段：</p> <ul><li><code>window</code> 往事件触发处传播，遇到注册的捕获事件会触发</li> <li>传播到事件触发处时触发注册的事件</li> <li>从事件触发处往 <code>window</code> 传播，遇到注册的冒泡事件会触发</li></ul> <p>事件触发一般来说会按照上面的顺序进行，但是也有特例，<strong>如果给一个 <code>body</code> 中的子节点同时注册冒泡和捕获事件，事件触发会按照注册的顺序执行。</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// 以下会先打印冒泡然后是捕获
+node.addEventListener(
+  'click',
+  event =&gt; {
+    console.log('冒泡')
+  },
+  false
+)
+node.addEventListener(
+  'click',
+  event =&gt; {
+    console.log('捕获 ')
+  },
+  true
+)
+
+</code></pre></div><h3 id="注册事件"><a href="#注册事件" class="header-anchor">#</a> 注册事件</h3> <p>通常我们使用 <code>addEventListener</code> 注册事件，该函数的第三个参数可以是布尔值，也可以是对象。对于布尔值 <code>useCapture</code> 参数来说，该参数默认值为 <code>false</code> ，<code>useCapture</code> 决定了注册的事件是捕获事件还是冒泡事件。对于对象参数来说，可以使用以下几个属性</p> <ul><li><code>capture</code>：布尔值，和 <code>useCapture</code> 作用一样</li> <li><code>once</code>：布尔值，值为 <code>true</code> 表示该回调只会调用一次，调用后会移除监听</li> <li><code>passive</code>：布尔值，表示永远不会调用 <code>preventDefault</code></li></ul> <p>一般来说，如果我们只希望事件只触发在目标上，这时候可以使用 <code>stopPropagation</code> 来阻止事件的进一步传播。通常我们认为 <code>stopPropagation</code> 是用来阻止事件冒泡的，其实该函数也可以阻止捕获事件。<code>stopImmediatePropagation</code> 同样也能实现阻止事件，但是还能阻止该事件目标执行别的注册事件。</p> <div class="language- extra-class"><pre class="language-text"><code>node.addEventListener(
+  'click',
+  event =&gt; {
+    event.stopImmediatePropagation()
+    console.log('冒泡')
+  },
+  false
+)
+// 点击 node 只会执行上面的函数，该函数不会执行
+node.addEventListener(
+  'click',
+  event =&gt; {
+    console.log('捕获 ')
+  },
+  true
+)
+
+</code></pre></div><h3 id="事件代理"><a href="#事件代理" class="header-anchor">#</a> 事件代理</h3> <p>如果一个节点中的子节点是动态生成的，那么子节点需要注册事件的话<strong>应该注册在父节点上</strong></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;ul id=&quot;ul&quot;&gt;
+	&lt;li&gt;1&lt;/li&gt;
+    &lt;li&gt;2&lt;/li&gt;
+	&lt;li&gt;3&lt;/li&gt;
+	&lt;li&gt;4&lt;/li&gt;
+	&lt;li&gt;5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script&gt;
+	let ul = document.querySelector('#ul')
+	ul.addEventListener('click', (event) =&gt; {
+		console.log(event.target);
+	})
+&lt;/script&gt;
+
+</code></pre></div><p>事件代理的方式相较于直接给目标注册事件来说，有以下优点：</p> <ul><li>节省内存</li> <li>不需要给子节点注销事件</li></ul> <h2 id="跨域"><a href="#跨域" class="header-anchor">#</a> 跨域</h2> <blockquote><p>涉及面试题：什么是跨域？为什么浏览器要使用同源策略？你有几种方式可以解决跨域问题？了解预检请求嘛？</p></blockquote> <p>因为浏览器出于安全考虑，有同源策略。也就是说，如果协议、域名或者端口有一个不同就是跨域，Ajax 请求会失败。</p> <p><strong>那么是出于什么安全考虑才会引入这种机制呢？</strong> 其实主要是用来防止 CSRF 攻击的。简单点说，CSRF 攻击是利用用户的登录态发起恶意请求。</p> <p>也就是说，没有同源策略的情况下，A 网站可以被任意其他来源的 Ajax 访问到内容。如果你当前 A 网站还存在登录态，那么对方就可以通过 Ajax 获得你的任何信息。当然跨域并不能完全阻止 CSRF。</p> <p><strong>然后我们来考虑一个问题，请求跨域了，那么请求到底发出去没有？</strong> 请求必然是发出去了，但是浏览器拦截了响应。你可能会疑问明明通过表单的方式可以发起跨域请求，为什么 Ajax 就不会。因为归根结底，跨域是为了阻止用户读取到另一个域名下的内容，Ajax 可以获取响应，浏览器认为这不安全，所以拦截了响应。但是表单并不会获取新的内容，所以可以发起跨域请求。同时也说明了跨域并不能完全阻止 CSRF，因为请求毕竟是发出去了。</p> <p>接下来我们将来学习几种常见的方式来解决跨域的问题。</p> <h3 id="jsonp"><a href="#jsonp" class="header-anchor">#</a> JSONP</h3> <p>JSONP 的原理很简单，就是利用 <code>&lt;script&gt;</code> 标签没有跨域限制的漏洞。通过 <code>&lt;script&gt;</code> 标签指向一个需要访问的地址并提供一个回调函数来接收数据当需要通讯时。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script src=&quot;http://domain/api?param1=a&amp;param2=b&amp;callback=jsonp&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    function jsonp(data) {
+    	console.log(data)
+	}
+&lt;/script&gt;    
+
+</code></pre></div><p>JSONP 使用简单且兼容性不错，但是只限于 <code>get</code> 请求。</p> <p>在开发中可能会遇到多个 JSONP 请求的回调函数名是相同的，这时候就需要自己封装一个 JSONP，以下是简单实现</p> <div class="language- extra-class"><pre class="language-text"><code>function jsonp(url, jsonpCallback, success) {
+  let script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.type = 'text/javascript'
+  window[jsonpCallback] = function(data) {
+    success &amp;&amp; success(data)
+  }
+  document.body.appendChild(script)
+}
+jsonp('http://xxx', 'callback', function(value) {
+  console.log(value)
+})
+
+</code></pre></div><h3 id="cors"><a href="#cors" class="header-anchor">#</a> CORS</h3> <p>CORS 需要浏览器和后端同时支持。IE 8 和 9 需要通过 <code>XDomainRequest</code> 来实现。</p> <p>浏览器会自动进行 CORS 通信，实现 CORS 通信的关键是后端。只要后端实现了 CORS，就实现了跨域。</p> <p>服务端设置 <code>Access-Control-Allow-Origin</code> 就可以开启 CORS。 该属性表示哪些域名可以访问资源，如果设置通配符则表示所有网站都可以访问资源。</p> <p>虽然设置 CORS 和前端没什么关系，但是通过这种方式解决跨域问题的话，会在发送请求时出现两种情况，分别为<strong>简单请求和复杂请求</strong>。</p> <h4 id="简单请求"><a href="#简单请求" class="header-anchor">#</a> 简单请求</h4> <p>以 Ajax 为例，当满足以下条件时，会触发简单请求</p> <ol><li><p>使用下列方法之一：</p> <ul><li><p><code>GET</code></p></li> <li><p><code>HEAD</code></p></li> <li><p><code>POST</code></p></li></ul></li> <li><p><code>Content-Type</code> 的值仅限于下列三者之一：</p> <ul><li><p><code>text/plain</code></p></li> <li><p><code>multipart/form-data</code></p></li> <li><p><code>application/x-www-form-urlencoded</code></p></li></ul></li></ol> <p>请求中的任意 <code>XMLHttpRequestUpload</code> 对象均没有注册任何事件监听器； <code>XMLHttpRequestUpload</code> 对象可以使用 <code>XMLHttpRequest.upload</code> 属性访问。</p> <h4 id="复杂请求"><a href="#复杂请求" class="header-anchor">#</a> 复杂请求</h4> <p>那么很显然，不符合以上条件的请求就肯定是复杂请求了。</p> <p>对于复杂请求来说，首先会发起一个预检请求，该请求是 <code>option</code> 方法的，通过该请求来知道服务端是否允许跨域请求。</p> <p>对于预检请求来说，如果你使用过 Node 来设置 CORS 的话，可能会遇到过这么一个坑。</p> <p>以下以 express 框架举例：</p> <div class="language- extra-class"><pre class="language-text"><code>app.use((req, res, next) =&gt; {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials'
+  )
+  next()
+})
+
+</code></pre></div><p>该请求会验证你的 <code>Authorization</code> 字段，没有的话就会报错。</p> <p>当前端发起了复杂请求后，你会发现就算你代码是正确的，返回结果也永远是报错的。因为预检请求也会进入回调中，也会触发 <code>next</code> 方法，因为预检请求并不包含 <code>Authorization</code> 字段，所以服务端会报错。</p> <p>想解决这个问题很简单，只需要在回调中过滤 <code>option</code> 方法即可</p> <div class="language- extra-class"><pre class="language-text"><code>res.statusCode = 204
+res.setHeader('Content-Length', '0')
+res.end()
+
+</code></pre></div><h3 id="document-domain"><a href="#document-domain" class="header-anchor">#</a> document.domain</h3> <p>该方式只能用于<strong>二级域名相同</strong>的情况下，比如 <code>a.test.com</code> 和 <code>b.test.com</code> 适用于该方式。</p> <p>只需要给页面添加 <code>document.domain = 'test.com'</code> 表示二级域名都相同就可以实现跨域</p> <h3 id="postmessage"><a href="#postmessage" class="header-anchor">#</a> postMessage</h3> <p>这种方式通常用于获取嵌入页面中的第三方页面数据。一个页面发送消息，另一个页面判断来源并接收消息</p> <div class="language- extra-class"><pre class="language-text"><code>// 发送消息端
+window.parent.postMessage('message', 'http://test.com')
+// 接收消息端
+var mc = new MessageChannel()
+mc.addEventListener('message', event =&gt; {
+  var origin = event.origin || event.originalEvent.origin
+  if (origin === 'http://test.com') {
+    console.log('验证通过')
+  }
+})
+
+</code></pre></div><h2 id="存储"><a href="#存储" class="header-anchor">#</a> 存储</h2> <blockquote><p>涉及面试题：有几种方式可以实现存储功能，分别有什么优缺点？什么是 Service Worker？</p></blockquote> <h3 id="cookie-localstorage-sessionstorage-indexdb"><a href="#cookie-localstorage-sessionstorage-indexdb" class="header-anchor">#</a> cookie，localStorage，sessionStorage，indexDB</h3> <p>我们先来通过表格学习下这几种存储方式的区别</p> <p>特性</p> <p>cookie</p> <p>localStorage</p> <p>sessionStorage</p> <p>indexDB</p> <p>数据生命周期</p> <p>一般由服务器生成，可以设置过期时间</p> <p>除非被清理，否则一直存在</p> <p>页面关闭就清理</p> <p>除非被清理，否则一直存在</p> <p>数据存储大小</p> <p>4K</p> <p>5M</p> <p>5M</p> <p>无限</p> <p>与服务端通信</p> <p>每次都会携带在 header 中，对于请求性能影响</p> <p>不参与</p> <p>不参与</p> <p>不参与</p> <p>从上表可以看到，<code>cookie</code> 已经不建议用于存储。如果没有大量数据存储需求的话，可以使用 <code>localStorage</code> 和 <code>sessionStorage</code> 。对于不怎么改变的数据尽量使用 <code>localStorage</code> 存储，否则可以用 <code>sessionStorage</code> 存储。</p> <p>对于 <code>cookie</code> 来说，我们还需要注意安全性。</p> <p>属性</p> <p>作用</p> <p>value</p> <p>如果用于保存用户登录态，应该将该值加密，不能使用明文的用户标识</p> <p>http-only</p> <p>不能通过 JS 访问 Cookie，减少 XSS 攻击</p> <p>secure</p> <p>只能在协议为 HTTPS 的请求中携带</p> <p>same-site</p> <p>规定浏览器不能在跨域请求中携带 Cookie，减少 CSRF 攻击</p> <h3 id="service-worker"><a href="#service-worker" class="header-anchor">#</a> Service Worker</h3> <p>Service Worker 是运行在浏览器背后的<strong>独立线程</strong>，一般可以用来实现缓存功能。使用 Service Worker的话，传输协议必须为 <strong>HTTPS</strong>。因为 Service Worker 中涉及到请求拦截，所以必须使用 HTTPS 协议来保障安全。</p> <p>Service Worker 实现缓存功能一般分为三个步骤：首先需要先注册 Service Worker，然后监听到 <code>install</code> 事件以后就可以缓存需要的文件，那么在下次用户访问的时候就可以通过拦截请求的方式查询是否存在缓存，存在缓存的话就可以直接读取缓存文件，否则就去请求数据。以下是这个步骤的实现：</p> <div class="language- extra-class"><pre class="language-text"><code>// index.js
+if (navigator.serviceWorker) {
+  navigator.serviceWorker
+    .register('sw.js')
+    .then(function(registration) {
+      console.log('service worker 注册成功')
+    })
+    .catch(function(err) {
+      console.log('servcie worker 注册失败')
+    })
+}
+// sw.js
+// 监听 `install` 事件，回调中缓存所需文件
+self.addEventListener('install', e =&gt; {
+  e.waitUntil(
+    caches.open('my-cache').then(function(cache) {
+      return cache.addAll(['./index.html', './index.js'])
+    })
+  )
+})
+
+// 拦截所有请求事件
+// 如果缓存中已经有请求的数据就直接用缓存，否则去请求数据
+self.addEventListener('fetch', e =&gt; {
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      if (response) {
+        return response
+      }
+      console.log('fetch source')
+    })
+  )
+})
+
+</code></pre></div><p>打开页面，可以在开发者工具中的 <code>Application</code> 看到 Service Worker 已经启动了</p> <p><img src="https://user-gold-cdn.xitu.io/2018/3/28/1626b1e8eba68e1c?w=1770&amp;h=722&amp;f=png&amp;s=192277" alt=""></p> <p>在 Cache 中也可以发现我们所需的文件已被缓存</p> <p><img src="https://user-gold-cdn.xitu.io/2018/3/28/1626b20dfc4fcd26?w=1118&amp;h=728&amp;f=png&amp;s=85610" alt=""></p> <p>当我们重新刷新页面可以发现我们缓存的数据是从 Service Worker 中读取的</p> <p><img src="https://user-gold-cdn.xitu.io/2018/3/28/1626b20e4f8f3257?w=2818&amp;h=298&amp;f=png&amp;s=74833" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myblog/interview/browser.html" class="prev">浏览器缓存机制</a></span> <span class="next"><a href="/myblog/interview/browser2.html">浏览器浏览器渲染原理缓存机制</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><div class="qrcode_container" data-v-e03bd75e><div class="tencent_code" data-v-e03bd75e><p data-v-e03bd75e></p></div> <div class="group_code" data-v-e03bd75e><p data-v-e03bd75e>扫描二维码 </p> <img src="/myblog/wechat.png" alt data-v-e03bd75e></div></div><!----></div></div>
+    <script src="/myblog/assets/js/app.73725760.js" defer></script><script src="/myblog/assets/js/2.930e24c3.js" defer></script><script src="/myblog/assets/js/48.2a5e8bc2.js" defer></script><script src="/myblog/assets/js/6.d2a48d28.js" defer></script><script src="/myblog/assets/js/10.bbc026f5.js" defer></script><script src="/myblog/assets/js/5.55ee87d5.js" defer></script>
+  </body>
+</html>

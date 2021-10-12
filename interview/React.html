@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React 常考基础知识点 | 前端进阶</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="shortcut icon" href="/myblog/favicon.ico" type="iamge/x-icon">
+    <meta name="description" content="欢迎来到前端进阶博客">
+    <meta name="keywords" content="前端进阶 前端文章">
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.1283e053.css" as="style"><link rel="preload" href="/myblog/assets/js/app.73725760.js" as="script"><link rel="preload" href="/myblog/assets/js/2.930e24c3.js" as="script"><link rel="preload" href="/myblog/assets/js/40.d5fb6bb0.js" as="script"><link rel="preload" href="/myblog/assets/js/6.d2a48d28.js" as="script"><link rel="preload" href="/myblog/assets/js/10.bbc026f5.js" as="script"><link rel="preload" href="/myblog/assets/js/5.55ee87d5.js" as="script"><link rel="prefetch" href="/myblog/assets/js/100.129f1307.js"><link rel="prefetch" href="/myblog/assets/js/101.53d810ae.js"><link rel="prefetch" href="/myblog/assets/js/102.c97714f1.js"><link rel="prefetch" href="/myblog/assets/js/103.e1c76fd2.js"><link rel="prefetch" href="/myblog/assets/js/104.bca5d8ed.js"><link rel="prefetch" href="/myblog/assets/js/105.c3781ae3.js"><link rel="prefetch" href="/myblog/assets/js/106.fc31364d.js"><link rel="prefetch" href="/myblog/assets/js/11.993ab3f7.js"><link rel="prefetch" href="/myblog/assets/js/12.d562dcd2.js"><link rel="prefetch" href="/myblog/assets/js/13.63897bd2.js"><link rel="prefetch" href="/myblog/assets/js/14.554bea76.js"><link rel="prefetch" href="/myblog/assets/js/15.903663f7.js"><link rel="prefetch" href="/myblog/assets/js/16.ae62cce8.js"><link rel="prefetch" href="/myblog/assets/js/17.5f8856c1.js"><link rel="prefetch" href="/myblog/assets/js/18.a97e8a3f.js"><link rel="prefetch" href="/myblog/assets/js/19.8dd22ad1.js"><link rel="prefetch" href="/myblog/assets/js/20.37d33db5.js"><link rel="prefetch" href="/myblog/assets/js/21.e35c34ec.js"><link rel="prefetch" href="/myblog/assets/js/22.37bc8223.js"><link rel="prefetch" href="/myblog/assets/js/23.4681e736.js"><link rel="prefetch" href="/myblog/assets/js/24.e6608bea.js"><link rel="prefetch" href="/myblog/assets/js/25.0e42743b.js"><link rel="prefetch" href="/myblog/assets/js/26.24fd48a9.js"><link rel="prefetch" href="/myblog/assets/js/27.8eb97bc8.js"><link rel="prefetch" href="/myblog/assets/js/28.677ea1b2.js"><link rel="prefetch" href="/myblog/assets/js/29.3d459346.js"><link rel="prefetch" href="/myblog/assets/js/3.e704fc44.js"><link rel="prefetch" href="/myblog/assets/js/30.7ec08b74.js"><link rel="prefetch" href="/myblog/assets/js/31.129cbe5c.js"><link rel="prefetch" href="/myblog/assets/js/32.decdd6bc.js"><link rel="prefetch" href="/myblog/assets/js/33.f8e32d1a.js"><link rel="prefetch" href="/myblog/assets/js/34.b1bbc57b.js"><link rel="prefetch" href="/myblog/assets/js/35.e0a3f604.js"><link rel="prefetch" href="/myblog/assets/js/36.1b90abd0.js"><link rel="prefetch" href="/myblog/assets/js/37.e73f4c86.js"><link rel="prefetch" href="/myblog/assets/js/38.5746ba73.js"><link rel="prefetch" href="/myblog/assets/js/39.112b79e0.js"><link rel="prefetch" href="/myblog/assets/js/4.0a553e3f.js"><link rel="prefetch" href="/myblog/assets/js/41.3ab64043.js"><link rel="prefetch" href="/myblog/assets/js/42.4a55d177.js"><link rel="prefetch" href="/myblog/assets/js/43.3b40e0f0.js"><link rel="prefetch" href="/myblog/assets/js/44.1f254e95.js"><link rel="prefetch" href="/myblog/assets/js/45.9b2b3797.js"><link rel="prefetch" href="/myblog/assets/js/46.704ac522.js"><link rel="prefetch" href="/myblog/assets/js/47.36da36c4.js"><link rel="prefetch" href="/myblog/assets/js/48.2a5e8bc2.js"><link rel="prefetch" href="/myblog/assets/js/49.49e81526.js"><link rel="prefetch" href="/myblog/assets/js/50.d21a358d.js"><link rel="prefetch" href="/myblog/assets/js/51.eb3feded.js"><link rel="prefetch" href="/myblog/assets/js/52.a18f23de.js"><link rel="prefetch" href="/myblog/assets/js/53.35bf7d6f.js"><link rel="prefetch" href="/myblog/assets/js/54.0fb6c926.js"><link rel="prefetch" href="/myblog/assets/js/55.dcbcb9be.js"><link rel="prefetch" href="/myblog/assets/js/56.8a057372.js"><link rel="prefetch" href="/myblog/assets/js/57.cfee38c4.js"><link rel="prefetch" href="/myblog/assets/js/58.4314716d.js"><link rel="prefetch" href="/myblog/assets/js/59.94685279.js"><link rel="prefetch" href="/myblog/assets/js/60.bf096a7a.js"><link rel="prefetch" href="/myblog/assets/js/61.7bb11047.js"><link rel="prefetch" href="/myblog/assets/js/62.f91e8eff.js"><link rel="prefetch" href="/myblog/assets/js/63.820b8744.js"><link rel="prefetch" href="/myblog/assets/js/64.53f1a9b0.js"><link rel="prefetch" href="/myblog/assets/js/65.29d31209.js"><link rel="prefetch" href="/myblog/assets/js/66.57b87049.js"><link rel="prefetch" href="/myblog/assets/js/67.2b2e86e4.js"><link rel="prefetch" href="/myblog/assets/js/68.13c61338.js"><link rel="prefetch" href="/myblog/assets/js/69.7f331071.js"><link rel="prefetch" href="/myblog/assets/js/7.9b44bf87.js"><link rel="prefetch" href="/myblog/assets/js/70.d3ec41e0.js"><link rel="prefetch" href="/myblog/assets/js/71.3fd92523.js"><link rel="prefetch" href="/myblog/assets/js/72.62cedd18.js"><link rel="prefetch" href="/myblog/assets/js/73.03e8c043.js"><link rel="prefetch" href="/myblog/assets/js/74.9390a2e8.js"><link rel="prefetch" href="/myblog/assets/js/75.b4e7875f.js"><link rel="prefetch" href="/myblog/assets/js/76.1b28ca40.js"><link rel="prefetch" href="/myblog/assets/js/77.a28386d5.js"><link rel="prefetch" href="/myblog/assets/js/78.1adf0e61.js"><link rel="prefetch" href="/myblog/assets/js/79.5af315a0.js"><link rel="prefetch" href="/myblog/assets/js/8.221d5dbe.js"><link rel="prefetch" href="/myblog/assets/js/80.5571d949.js"><link rel="prefetch" href="/myblog/assets/js/81.fbbb7685.js"><link rel="prefetch" href="/myblog/assets/js/82.586b2504.js"><link rel="prefetch" href="/myblog/assets/js/83.2edd208a.js"><link rel="prefetch" href="/myblog/assets/js/84.62f7a68e.js"><link rel="prefetch" href="/myblog/assets/js/85.7787cba5.js"><link rel="prefetch" href="/myblog/assets/js/86.8c303f94.js"><link rel="prefetch" href="/myblog/assets/js/87.eb0091ee.js"><link rel="prefetch" href="/myblog/assets/js/88.cafbfd00.js"><link rel="prefetch" href="/myblog/assets/js/89.9a8ea80f.js"><link rel="prefetch" href="/myblog/assets/js/9.2b6bd5d7.js"><link rel="prefetch" href="/myblog/assets/js/90.a69b89e2.js"><link rel="prefetch" href="/myblog/assets/js/91.7e12734e.js"><link rel="prefetch" href="/myblog/assets/js/92.94b8cc49.js"><link rel="prefetch" href="/myblog/assets/js/93.96b33ae7.js"><link rel="prefetch" href="/myblog/assets/js/94.b24a698f.js"><link rel="prefetch" href="/myblog/assets/js/95.4e92f6fc.js"><link rel="prefetch" href="/myblog/assets/js/96.3d1ad7fa.js"><link rel="prefetch" href="/myblog/assets/js/97.67b0e4c6.js"><link rel="prefetch" href="/myblog/assets/js/98.f0af5533.js"><link rel="prefetch" href="/myblog/assets/js/99.c8a0f6a9.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.1283e053.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">前端进阶</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/" class="nav-link">主页</a></div><div class="nav-item"><a href="/myblog/webframe/" class="nav-link">前端</a></div> <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    gitHub<span style="color:red;">欢迎star</span> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myblog/" class="nav-link">主页</a></div><div class="nav-item"><a href="/myblog/webframe/" class="nav-link">前端</a></div> <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    gitHub<span style="color:red;">欢迎star</span> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <div class="my_introduce" style="padding-left:1rem;"><div class="introduce_component" data-v-a7d2d778><img src="/myblog/home.png" alt data-v-a7d2d778> <div class="intro_content" data-v-a7d2d778><h3 data-v-a7d2d778>前端进阶</h3> <p data-v-a7d2d778>前端进阶 学习成长之路</p></div></div></div> <ul class="sidebar-links"><li><a href="/myblog/interview/css.html" class="sidebar-link">面试题-CSS篇</a></li><li><a href="/myblog/interview/CSS1.html" class="sidebar-link">CSS 常考面试题资料</a></li><li><a href="/myblog/interview/EventLoop.html" class="sidebar-link">EventLoop篇</a></li><li><a href="/myblog/interview/DevTools.html" class="sidebar-link">DevTools Tips</a></li><li><a href="/myblog/interview/js10.html" class="sidebar-link">面试题-JS篇</a></li><li><a href="/myblog/interview/JS0.html" class="sidebar-link">JS 思考题</a></li><li><a href="/myblog/interview/JS1.html" class="sidebar-link">JS 基础知识点及常考面试题（一）</a></li><li><a href="/myblog/interview/JS2.html" class="sidebar-link">JS 基础知识点及常考面试题（二）</a></li><li><a href="/myblog/interview/JS.html" class="sidebar-link">JS 进阶知识点及常考面试题</a></li><li><a href="/myblog/interview/JS3.html" class="sidebar-link">JS 异步编程及常考面试题</a></li><li><a href="/myblog/interview/algorithm.html" class="sidebar-link">常考算法题解析</a></li><li><a href="/myblog/interview/ES6.html" class="sidebar-link">ES6知识点及常考面试题</a></li><li><a href="/myblog/interview/unique.html" class="sidebar-link">如何答一道惊艳面试官的数组去重问题？</a></li><li><a href="/myblog/interview/rewriteJs.html" class="sidebar-link">手写代码[`编程`]</a></li><li><a href="/myblog/interview/React.html" aria-current="page" class="active sidebar-link">React 常考基础知识点</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myblog/interview/React.html#生命周期" class="sidebar-link">生命周期</a></li><li class="sidebar-sub-header"><a href="/myblog/interview/React.html#setstate" class="sidebar-link">setState</a></li><li class="sidebar-sub-header"><a href="/myblog/interview/React.html#性能优化" class="sidebar-link">性能优化</a></li><li class="sidebar-sub-header"><a href="/myblog/interview/React.html#通信" class="sidebar-link">通信</a></li></ul></li><li><a href="/myblog/interview/React1.html" class="sidebar-link">React 常考进阶知识点</a></li><li><a href="/myblog/interview/ReactAndVue.html" class="sidebar-link">React和vue区别</a></li><li><a href="/myblog/interview/vue.html" class="sidebar-link">vue篇</a></li><li><a href="/myblog/interview/Vue1.html" class="sidebar-link">Vue 常考基础知识点</a></li><li><a href="/myblog/interview/Vue2.html" class="sidebar-link">Vue 常考进阶知识点</a></li><li><a href="/myblog/interview/HTTP.html" class="sidebar-link">HTTP 及 TLS</a></li><li><a href="/myblog/interview/HTTP2.html" class="sidebar-link">HTTP 2 及 HTTP 3</a></li><li><a href="/myblog/interview/browser.html" class="sidebar-link">浏览器缓存机制</a></li><li><a href="/myblog/interview/browser1.html" class="sidebar-link">浏览器基础知识点及常考面试题</a></li><li><a href="/myblog/interview/browser2.html" class="sidebar-link">浏览器浏览器渲染原理缓存机制</a></li><li><a href="/myblog/interview/performanceOptimization.html" class="sidebar-link">性能优化</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-常考基础知识点"><a href="#react-常考基础知识点" class="header-anchor">#</a> React 常考基础知识点</h1> <p>这一章节我们将来学习 React 的一些经常考到的基础知识点。</p> <h2 id="生命周期"><a href="#生命周期" class="header-anchor">#</a> 生命周期</h2> <p>在 V16 版本中引入了 Fiber 机制。这个机制一定程度上的影响了部分生命周期的调用，并且也引入了新的 2 个 API 来解决问题，关于 Fiber 的内容将会在下一章节中讲到。</p> <p>在之前的版本中，如果你拥有一个很复杂的复合组件，然后改动了最上层组件的 <code>state</code>，那么调用栈可能会很长</p> <p><img src="https://user-gold-cdn.xitu.io/2018/6/25/164358b0310f476c?w=685&amp;h=739&amp;f=png&amp;s=61462" alt=""></p> <p>调用栈过长，再加上中间进行了复杂的操作，就可能导致长时间阻塞主线程，带来不好的用户体验。Fiber 就是为了解决该问题而生。</p> <p>Fiber 本质上是一个虚拟的堆栈帧，新的调度器会按照优先级自由调度这些帧，从而将之前的同步渲染改成了异步渲染，在不影响体验的情况下去分段计算更新。</p> <p><img src="https://user-gold-cdn.xitu.io/2018/6/25/164358f89595d56f?w=1119&amp;h=600&amp;f=png&amp;s=330885" alt=""></p> <p>对于如何区别优先级，React 有自己的一套逻辑。对于动画这种实时性很高的东西，也就是 16 ms 必须渲染一次保证不卡顿的情况下，React 会每 16 ms（以内） 暂停一下更新，返回来继续渲染动画。</p> <p>对于异步渲染，现在渲染有两个阶段：<code>reconciliation</code> 和 <code>commit</code> 。前者过程是可以打断的，后者不能暂停，会一直更新界面直到完成。</p> <p><strong>Reconciliation</strong> 阶段</p> <ul><li><code>componentWillMount</code></li> <li><code>componentWillReceiveProps</code></li> <li><code>shouldComponentUpdate</code></li> <li><code>componentWillUpdate</code></li></ul> <p><strong>Commit</strong> 阶段</p> <ul><li><code>componentDidMount</code></li> <li><code>componentDidUpdate</code></li> <li><code>componentWillUnmount</code></li></ul> <p>因为 Reconciliation 阶段是可以被打断的，所以 Reconciliation 阶段会执行的生命周期函数就可能会出现调用多次的情况，从而引起 Bug。由此对于 Reconciliation 阶段调用的几个函数，除了 <code>shouldComponentUpdate</code> 以外，其他都应该避免去使用，并且 V16 中也引入了新的 API 来解决这个问题。</p> <p><code>getDerivedStateFromProps</code> 用于替换 <code>componentWillReceiveProps</code> ，该函数会在初始化和 <code>update</code> 时被调用</p> <div class="language- extra-class"><pre class="language-text"><code>class ExampleComponent extends React.Component {
+  // Initialize state in constructor,
+  // Or with a property initializer.
+  state = {};
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.someMirroredValue !== nextProps.someValue) {
+      return {
+        derivedData: computeDerivedState(nextProps),
+        someMirroredValue: nextProps.someValue
+      };
+    }
+
+    // Return null to indicate no change to state.
+    return null;
+  }
+}
+
+</code></pre></div><p><code>getSnapshotBeforeUpdate</code> 用于替换 <code>componentWillUpdate</code> ，该函数会在 <code>update</code> 后 DOM 更新前被调用，用于读取最新的 DOM 数据。</p> <h2 id="setstate"><a href="#setstate" class="header-anchor">#</a> setState</h2> <p><code>setState</code> 在 React 中是经常使用的一个 API，但是它存在一些的问题经常会导致初学者出错，核心原因就是因为这个 API 是异步的。</p> <p>首先 <code>setState</code> 的调用并不会马上引起 <code>state</code> 的改变，并且如果你一次调用了多个 <code>setState</code> ，那么结果可能并不如你期待的一样。</p> <div class="language- extra-class"><pre class="language-text"><code>handle() {
+  // 初始化 `count` 为 0
+  console.log(this.state.count) // -&gt; 0
+  this.setState({ count: this.state.count + 1 })
+  this.setState({ count: this.state.count + 1 })
+  this.setState({ count: this.state.count + 1 })
+  console.log(this.state.count) // -&gt; 0
+}
+
+</code></pre></div><p>第一，两次的打印都为 0，因为 <code>setState</code> 是个异步 API，只有同步代码运行完毕才会执行。<code>setState</code> 异步的原因我认为在于，<code>setState</code> 可能会导致 DOM 的重绘，如果调用一次就马上去进行重绘，那么调用多次就会造成不必要的性能损失。设计成异步的话，就可以将多次调用放入一个队列中，在恰当的时候统一进行更新过程。</p> <p>第二，虽然调用了三次 <code>setState</code> ，但是 <code>count</code> 的值还是为 1。因为多次调用会合并为一次，只有当更新结束后 <code>state</code> 才会改变，三次调用等同于如下代码</p> <div class="language- extra-class"><pre class="language-text"><code>Object.assign(  
+  {},
+  { count: this.state.count + 1 },
+  { count: this.state.count + 1 },
+  { count: this.state.count + 1 },
+)w
+
+</code></pre></div><p>当然你也可以通过以下方式来实现调用三次 <code>setState</code> 使得 <code>count</code> 为 3</p> <div class="language- extra-class"><pre class="language-text"><code>handle() {
+  this.setState((prevState) =&gt; ({ count: prevState.count + 1 }))
+  this.setState((prevState) =&gt; ({ count: prevState.count + 1 }))
+  this.setState((prevState) =&gt; ({ count: prevState.count + 1 }))
+}
+
+</code></pre></div><p>如果你想在每次调用 <code>setState</code> 后获得正确的 <code>state</code> ，可以通过如下代码实现</p> <div class="language- extra-class"><pre class="language-text"><code>handle() {
+    this.setState((prevState) =&gt; ({ count: prevState.count + 1 }), () =&gt; {
+        console.log(this.state)
+    })
+}
+
+</code></pre></div><h2 id="性能优化"><a href="#性能优化" class="header-anchor">#</a> 性能优化</h2> <p>这小节内容集中在组件的性能优化上，这一方面的性能优化也基本集中在 <code>shouldComponentUpdate</code> 这个钩子函数上做文章。</p> <blockquote><p>PS：下文中的 state 指代了 state 及 props</p></blockquote> <p>在 <code>shouldComponentUpdate</code> 函数中我们可以通过返回布尔值来决定当前组件是否需要更新。这层代码逻辑可以是简单地浅比较一下当前 <code>state</code> 和之前的 <code>state</code> 是否相同，也可以是判断某个值更新了才触发组件更新。一般来说不推荐完整地对比当前 <code>state</code> 和之前的 <code>state</code> 是否相同，因为组件更新触发可能会很频繁，这样的完整对比性能开销会有点大，可能会造成得不偿失的情况。</p> <p>当然如果真的想完整对比当前 <code>state</code> 和之前的 <code>state</code> 是否相同，并且不影响性能也是行得通的，可以通过 immutable 或者 immer 这些库来生成不可变对象。这类库对于操作大规模的数据来说会提升不错的性能，并且一旦改变数据就会生成一个新的对象，对比前后 <code>state</code> 是否一致也就方便多了，同时也很推荐阅读下 immer 的源码实现。</p> <p>另外如果只是单纯的浅比较一下，可以直接使用 <code>PureComponent</code>，底层就是实现了浅比较 <code>state</code>。</p> <div class="language- extra-class"><pre class="language-text"><code>class Test extends React.PureComponent {
+  render() {
+    return (
+      &lt;div&gt;
+        PureComponent
+      &lt;/div&gt;
+    )
+  }
+}
+
+</code></pre></div><p>这时候你可能会考虑到函数组件就不能使用这种方式了，如果你使用 16.6.0 之后的版本的话，可以使用 <code>React.memo</code> 来实现相同的功能。</p> <div class="language- extra-class"><pre class="language-text"><code>const Test = React.memo(() =&gt; (
+    &lt;div&gt;
+        PureComponent
+    &lt;/div&gt;
+))
+
+</code></pre></div><p>通过这种方式我们就可以既实现了 <code>shouldComponentUpdate</code> 的浅比较，又能够使用函数组件。</p> <h2 id="通信"><a href="#通信" class="header-anchor">#</a> 通信</h2> <p>其实 React 中的组件通信基本和 Vue 中的一致。同样也分为以下三种情况：</p> <ul><li>父子组件通信</li> <li>兄弟组件通信</li> <li>跨多层级组件通信</li> <li>任意组件</li></ul> <h3 id="父子通信"><a href="#父子通信" class="header-anchor">#</a> 父子通信</h3> <p>父组件通过 <code>props</code> 传递数据给子组件，子组件通过调用父组件传来的函数传递数据给父组件，这两种方式是最常用的父子通信实现办法。</p> <p>这种父子通信方式也就是典型的单向数据流，父组件通过 <code>props</code> 传递数据，子组件不能直接修改 <code>props</code>， 而是必须通过调用父组件函数的方式告知父组件修改数据。</p> <h3 id="兄弟组件通信"><a href="#兄弟组件通信" class="header-anchor">#</a> 兄弟组件通信</h3> <p>对于这种情况可以通过共同的父组件来管理状态和事件函数。比如说其中一个兄弟组件调用父组件传递过来的事件函数修改父组件中的状态，然后父组件将状态传递给另一个兄弟组件。</p> <h3 id="跨多层次组件通信"><a href="#跨多层次组件通信" class="header-anchor">#</a> 跨多层次组件通信</h3> <p>如果你使用 16.3 以上版本的话，对于这种情况可以使用 Context API。</p> <div class="language- extra-class"><pre class="language-text"><code>// 创建 Context，可以在开始就传入值
+const StateContext = React.createContext()
+class Parent extends React.Component {
+  render () {
+    return (
+      // value 就是传入 Context 中的值
+      &lt;StateContext.Provider value='yck'&gt;
+        &lt;Child /&gt;
+      &lt;/StateContext.Provider&gt;
+    )
+  }
+}
+class Child extends React.Component {
+  render () {
+    return (
+      &lt;ThemeContext.Consumer&gt;
+        // 取出值
+        {context =&gt; (
+          name is { context }
+        )}
+      &lt;/ThemeContext.Consumer&gt;
+    );
+  }
+}
+
+</code></pre></div><h3 id="任意组件"><a href="#任意组件" class="header-anchor">#</a> 任意组件</h3> <p>这种方式可以通过 Redux 或者 Event Bus 解决，另外如果你不怕麻烦的话，可以使用这种方式解决上述所有的通信情况</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myblog/interview/rewriteJs.html" class="prev">手写代码[`编程`]</a></span> <span class="next"><a href="/myblog/interview/React1.html">React 常考进阶知识点</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><div class="qrcode_container" data-v-e03bd75e><div class="tencent_code" data-v-e03bd75e><p data-v-e03bd75e></p></div> <div class="group_code" data-v-e03bd75e><p data-v-e03bd75e>扫描二维码 </p> <img src="/myblog/wechat.png" alt data-v-e03bd75e></div></div><!----></div></div>
+    <script src="/myblog/assets/js/app.73725760.js" defer></script><script src="/myblog/assets/js/2.930e24c3.js" defer></script><script src="/myblog/assets/js/40.d5fb6bb0.js" defer></script><script src="/myblog/assets/js/6.d2a48d28.js" defer></script><script src="/myblog/assets/js/10.bbc026f5.js" defer></script><script src="/myblog/assets/js/5.55ee87d5.js" defer></script>
+  </body>
+</html>

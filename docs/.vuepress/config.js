@@ -53,10 +53,10 @@ module.exports = {
             //     text: '数据库',
             //     link: '/database/',
             // },
-            {
-                text: '面试问题',
-                link: '/interview/',
-            },
+            // {
+            //     text: '面试问题',
+            //     link: '/interview/',
+            // },
             //  {
             //     text: '工作总结',
             //     link: '/node/',

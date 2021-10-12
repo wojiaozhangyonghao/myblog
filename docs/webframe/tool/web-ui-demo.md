@@ -2,7 +2,7 @@
  * @Author: zyh
  * @Date: 2021-09-17 14:10:03
  * @LastEditors: zyh
- * @LastEditTime: 2021-09-20 16:35:42
+ * @LastEditTime: 2021-10-12 15:21:58
  * @Description: file content
 -->
 
@@ -26,38 +26,38 @@
       @sort-change="sortChange">
 
      <template slot="search">
-			<el-col :md="6" :xs="24">
-				<el-form-item label="自定义">
-					<el-input placeholder="自定义搜索" size="small" v-model="searchForm.slot" />
-				</el-form-item>
-			</el-col>
+			<a-col :md="6" :xs="24">
+				<a-form-item label="自定义">
+					<a-input placeholder="自定义搜索" size="small" v-model="searchForm.slot" />
+				</a-form-item>
+			</a-col>
 		</template>
 		<template slot="searchMenu">
-			<el-button size="small" >查询自定义按钮</el-button>
+			<a-button size="small" >查询自定义按钮</a-button>
 		</template>
 		<template slot-scope="scope" slot="nameForm">
-			<el-tag :size="scope.size">{{ scope.label }}</el-tag>
+			<a-tag :size="scope.size">{{ scope.label }}</a-tag>
 		</template>
 		<template slot-scope="scope" slot="name">
-			<el-tag :size="scope.size">{{ scope.label }}</el-tag>
+			<a-tag :size="scope.size">{{ scope.label }}</a-tag>
 		</template>
 		<template slot="tip">
-			<el-button type="text" size="small">
+			<a-button type="text" size="small">
 				tip自定义按钮
-			</el-button>
+			</a-button>
 			<span>tip自定义内容</span>
 		</template>
 		<template slot-scope="props" slot="menuLeft">
-			<el-button type="warning" size="small" icon="el-icon-message" > 发送邮件</el-button>
+			<a-button type="warning" size="small" icon="a-icon-message" > 发送邮件</a-button>
 		</template>
 		<template slot-scope="props" slot="expand">
-			<el-tag>备注：</el-tag>  {{ props.row.projectComment }}
+			<a-tag>备注：</a-tag>  {{ props.row.projectComment }}
 		</template>
 		<template slot-scope="scope" slot="menu">
-			<el-button :size="scope.size" :disabled="scope.disabled" :type="scope.type" icon="el-icon-share"></el-button>
+			<a-button :size="scope.size" :disabled="scope.disabled" :type="scope.type" icon="el-icon-share"></a-button>
 		</template>
 		<template slot-scope="scope" slot="menuForm">
-			<el-button :size="scope.size">自定义按钮</el-button>
+			<a-button :size="scope.size">自定义按钮</a-button>
 		</template>
     </page-table>
   </div>
@@ -438,7 +438,7 @@ export function delObj(id, audit) {
 	                 @row-save="rowSave"
 	                 @row-update="rowUpdate">
 		<template slot-scope="scope" slot="menuForm">
-			<el-button :size="scope.size">自定义按钮</el-button>
+			<a-button :size="scope.size">自定义按钮</a-button>
 		</template>
 	</page-form>
 </template>
